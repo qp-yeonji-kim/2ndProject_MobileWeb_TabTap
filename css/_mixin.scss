@@ -1,0 +1,9 @@
+@mixin b-box($value...){
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin b-radius($value...){
+  -webkit-border-radius: $value; 
+  border-radius: $value; 
+}

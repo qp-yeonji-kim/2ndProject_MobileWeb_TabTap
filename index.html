@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> TAB TAP_새로움을 편리함으로 </title>
+  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/swiper-bundle.css">
   <script src="js/jquery-1.12.4.min.js"></script>
@@ -11,222 +13,226 @@
 </head>
 
 <body>
-  <header id="header">
-    <div id="wrap">
-      <h1><a href="index.html"><img src="images/common/logox1.png" alt="TAB TAP 로고"></a></h1>
-      <input type="search">
-      <input type="button">
-      <!-- input태그는 스크린 리더기가 알아서 읽어주는지 혹은 검색하기라고 따로 작성해야 하는지 -->
-      <a class="menu_btn" href="" role="button">
-        <span class="blind-b">메뉴 열기</span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-      <nav id="gnb">
-        <span>로그인이 필요합니다.</span>
-        <ul>
-          <li><a href="">나의 페이지</a></li>
-          <li><a href="">장바구니</a></li>
-          <li><a href="">주문내역</a></li>
-        </ul>
-        <ul>
-          <li>
-            <a href="">회사소개</a>
-            <ul>
-              <li><a href="">서비스 안내</a></li>
-              <li><a href="">협력사 소개</a></li>
-              <li><a href="">이용방법</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">제품목록 </a>
-            <ul>
-              <li><a href="">제품검색</a></li>
-              <li><a href="">WACOM</a></li>
-              <li><a href="">HUION</a></li>
-              <li><a href="">XP-PEN</a></li>
-              <li><a href="">장은테크</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">예약문의</a>
-            <ul>
-              <li><a href="">제품예약</a></li>
-              <li><a href="">상담신청</a></li>
-              <li><a href="">문의내역</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">이용후기</a>
-          </li>
-          <li>
-            <a href="">공지사항</a>
-            <ul>
-              <li><a href="">이벤트</a></li>
-              <li><a href="">뉴스</a></li>
-              <li><a href="">안내</a></li>
-            </ul>
-          </li>
-        </ul>
-        <strong>이용시간</strong>
-        <p>
-          평일 오전 9시 ~ 오후 7시<br>
-          토요일 오전 9시 ~ 오후 6시<br>
-          일요일, 공휴일 휴무<br>
-          점심시간 12시 ~ 1시
-        </p>
-        <strong>대표전화 </strong>
-        <span>012-5453-3121</span>
-      </nav>
-    </div>
-  </header>
+  <div id="wrap">
+    <header id="header">
+      <div id="nav_bar">
+        <h1><a href="index.html"><img src="images/common/logox1.png" alt="TAB TAP 로고"></a></h1>
+        <div id="search_bar">
+          <input type="search" class="typing">
+          <input type="button" class="submit_btn">
+        </div>
+        <!-- input태그는 스크린 리더기가 알아서 읽어주는지 혹은 검색하기라고 따로 작성해야 하는지 -->
+        <a class="menu_btn" href="" role="button">
+          <span class="blind-b">메뉴 열기</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <nav id="gnb">
+          <span>로그인이 필요합니다.</span>
+          <ul>
+            <li><a href="">나의 페이지</a></li>
+            <li><a href="">장바구니</a></li>
+            <li><a href="">주문내역</a></li>
+          </ul>
+          <ul>
+            <li>
+              <a href="">회사소개</a>
+              <ul>
+                <li><a href="">서비스 안내</a></li>
+                <li><a href="">협력사 소개</a></li>
+                <li><a href="">이용방법</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">제품목록 </a>
+              <ul>
+                <li><a href="">제품검색</a></li>
+                <li><a href="">WACOM</a></li>
+                <li><a href="">HUION</a></li>
+                <li><a href="">XP-PEN</a></li>
+                <li><a href="">장은테크</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">예약문의</a>
+              <ul>
+                <li><a href="">제품예약</a></li>
+                <li><a href="">상담신청</a></li>
+                <li><a href="">문의내역</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">이용후기</a>
+            </li>
+            <li>
+              <a href="">공지사항</a>
+              <ul>
+                <li><a href="">이벤트</a></li>
+                <li><a href="">뉴스</a></li>
+                <li><a href="">안내</a></li>
+              </ul>
+            </li>
+          </ul>
+          <strong>이용시간</strong>
+          <p>
+            평일 오전 9시 ~ 오후 7시<br>
+            토요일 오전 9시 ~ 오후 6시<br>
+            일요일, 공휴일 휴무<br>
+            점심시간 12시 ~ 1시
+          </p>
+          <strong>대표전화 </strong>
+          <span>012-5453-3121</span>
+        </nav>
+      </div>
+    </header>
 
-  <section id="main_section" role="main">
-    <!-- role을 넣을 때와 안넣을 때? -->
-    <article id="cnt_main">
-      <h2 class="blind-b">TAB TAP 소개</h2>
+    <section id="main_section" role="main">
+      <!-- role을 넣을 때와 안넣을 때? -->
+      <article id="cnt_main">
+        <h2 class="blind-b">TAB TAP 소개</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
+                <span aria-label="1">01</span>
+                <strong>스테디셀러부터<br>
+                  최신 기기까지,<br>
+                  새로움을 경험해보세요.</strong>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <span aria-label="2">02</span>
+                <strong>타블렛 사용에 필요한<br>
+                  다양한 보조장비와<br>
+                  악세사리도 잊지 마세요.</strong>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <span aria-label="3">03</span>
+                <strong>전국 14개 지점에<br>
+                  총 56종의<br>
+                  타블렛이 구비되어 있습니다.</strong>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </article>
+
+      <article id="cnt_company">
+        <h2 class="blind-b">회사별 타블렛</h2>
+        <strong>자신에게 맞는 장비를 찾아보세요</strong>
+        <ul>
+          <li><a href="">WACOM</a></li>
+          <li><a href="">HUION</a></li>
+          <li><a href="">XP-PEN</a></li>
+          <li><a href="">장은테크</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <article id="cnt_best-review">
+      <h2>REVIEW</h2>
+      <ul>
+        <li>
+          <img src="" alt="">
+          <strong>Intuos pro 중형</strong>
+          <p>집에 설치해 둔 클립스튜디오 프리셋<br>
+            그대로 체험할 수 있어서 좋았어요.</p>
+          <span>장**</span>
+          <span aria-hidden="true">나머지 부분도 읽기</span>
+        </li>
+        <li>
+          <img src="" alt="">
+          <strong></strong>
+          <p></p>
+          <span></span>
+          <span aria-hidden="true"></span>
+        </li>
+      </ul>
+    </article>
+
+    <article id="cnt_now_event">
+      <h2>EVENT</h2>
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div>
-              <span aria-label="1">01</span>
-              <strong>스테디셀러부터<br>
-                최신 기기까지,<br>
-                새로움을 경험해보세요.</strong>
-            </div>
+            <strong>우수 체험 후기 모집</strong>
+            <span>30% 할인 쿠폰 제공</span>
           </div>
           <div class="swiper-slide">
-            <div>
-              <span aria-label="2">02</span>
-              <strong>타블렛 사용에 필요한<br>
-                다양한 보조장비와<br>
-                악세사리도 잊지 마세요.</strong>
-            </div>
+            <strong>
+              인스타그램/ 페이스북<br>
+              구독자 댓글 이벤트
+            </strong>
           </div>
           <div class="swiper-slide">
-            <div>
-              <span aria-label="3">03</span>
-              <strong>전국 14개 지점에<br>
-                총 56종의<br>
-                타블렛이 구비되어 있습니다.</strong>
-            </div>
+            <strong>신규가입 이벤트</strong>
+            <span>새롭게 가입한 회원 선착순 100명께<br>
+              배송비 무료 쿠폰 제공</span>
           </div>
         </div>
+        <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
     </article>
 
-    <article id="cnt_company">
-      <h2 class="blind-b">회사별 타블렛</h2>
-      <strong>자신에게 맞는 장비를 찾아보세요</strong>
+    <article id="cnt_social">
+      <h2>SOCIAL</h2>
+      <p>TAB TAP의 다양한 소식을 접해보세요.</p>
       <ul>
-        <li><a href="">WACOM</a></li>
-        <li><a href="">HUION</a></li>
-        <li><a href="">XP-PEN</a></li>
-        <li><a href="">장은테크</a></li>
+        <li>
+          <a href="">
+            <span class="blind-b">TAB TAP 페이스북 바로가기</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="blind-b">TAB TAP 인스타그램 바로가기</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="blind-b">TAB TAP 블로그 바로가기</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="blind-b">TAB TAP 유튜브 바로가기</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="blind-b">TAB TAP 카카오톡 친구 바로가기</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>공지사항</span>
+            <span class="blind-b">바로가기</span>
+          </a>
+        </li>
       </ul>
     </article>
-  </section>
 
-  <article id="cnt_best-review">
-    <h2>REVIEW</h2>
-    <ul>
-      <li>
-        <img src="" alt="">
-        <strong>Intuos pro 중형</strong>
-        <p>집에 설치해 둔 클립스튜디오 프리셋<br>
-          그대로 체험할 수 있어서 좋았어요.</p>
-        <span>장**</span>
-        <span aria-hidden="true">나머지 부분도 읽기</span>
-      </li>
-      <li>
-        <img src="" alt="">
-        <strong></strong>
-        <p></p>
-        <span></span>
-        <span aria-hidden="true"></span>
-      </li>
-    </ul>
-  </article>
-
-  <article id="cnt_now_event">
-    <h2>EVENT</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <strong>우수 체험 후기 모집</strong>
-          <span>30% 할인 쿠폰 제공</span>
-        </div>
-        <div class="swiper-slide">
-          <strong>
-            인스타그램/ 페이스북<br>
-            구독자 댓글 이벤트
-          </strong>
-        </div>
-        <div class="swiper-slide">
-          <strong>신규가입 이벤트</strong>
-          <span>새롭게 가입한 회원 선착순 100명께<br>
-            배송비 무료 쿠폰 제공</span>
-        </div>
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </article>
-
-  <article id="cnt_social">
-    <h2>SOCIAL</h2>
-    <p>TAB TAP의 다양한 소식을 접해보세요.</p>
-    <ul>
-      <li>
-        <a href="">
-          <span class="blind-b">TAB TAP 페이스북 바로가기</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <span class="blind-b">TAB TAP 인스타그램 바로가기</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <span class="blind-b">TAB TAP 블로그 바로가기</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <span class="blind-b">TAB TAP 유튜브 바로가기</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <span class="blind-b">TAB TAP 카카오톡 친구 바로가기</span>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <span>공지사항</span>
-          <span class="blind-b">바로가기</span>
-        </a>
-      </li>
-    </ul>
-  </article>
-
-  <footer id="footer">
-    <span>(주)TAB TAP</span>
-    <ul>
-      <li><a href="">개인정보방침</a></li>
-      <li><a href="">이용약관</a></li>
-      <li><a href=""> 이메일무단수집거부</a></li>
-      <li><a href=""> 아이디어정책</a></li>
-    </ul>
-    <address id="address">
-      서울시 강남구 강남대로 22길 008<br>
-      대표전화 012-5453-3121
-      <span>Copyright @TAB TAP All Rights Reserved</span>
-    </address>
-  </footer>
+    <footer id="footer">
+      <span>(주)TAB TAP</span>
+      <ul>
+        <li><a href="">개인정보방침</a></li>
+        <li><a href="">이용약관</a></li>
+        <li><a href=""> 이메일무단수집거부</a></li>
+        <li><a href=""> 아이디어정책</a></li>
+      </ul>
+      <address id="address">
+        서울시 강남구 강남대로 22길 008<br>
+        대표전화 012-5453-3121
+        <span>Copyright @TAB TAP All Rights Reserved</span>
+      </address>
+    </footer>
+  </div>
 </body>
 
 </html>
