@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title> TAB TAP 새로움을 편리함으로 </title>
+  <title> TAB TAP_새로움을 편리함으로 </title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/swiper-bundle.css">
   <script src="js/jquery-1.12.4.min.js"></script>
@@ -11,17 +11,14 @@
 </head>
 
 <body>
-  <div id="skip">
-    <a href="#cnt_main">본문바로가기</a>
-  </div>
   <header id="header">
     <div id="wrap">
-      <h1><a href="index.html"><img src="images/common/logo.png" alt="TAB TAP 로고"></a></h1>
+      <h1><a href="index.html"><img src="images/common/logox1.png" alt="TAB TAP 로고"></a></h1>
       <input type="search">
       <input type="button">
       <!-- input태그는 스크린 리더기가 알아서 읽어주는지 혹은 검색하기라고 따로 작성해야 하는지 -->
-      <span class="blind-b">메뉴 열기</span>
       <a class="menu_btn" href="" role="button">
+        <span class="blind-b">메뉴 열기</span>
         <span></span>
         <span></span>
         <span></span>
@@ -84,7 +81,9 @@
       </nav>
     </div>
   </header>
-  <section id="main_section">
+
+  <section id="main_section" role="main">
+    <!-- role을 넣을 때와 안넣을 때? -->
     <article id="cnt_main">
       <h2 class="blind-b">TAB TAP 소개</h2>
       <div class="swiper-container">
@@ -168,7 +167,7 @@
         <div class="swiper-slide">
           <strong>신규가입 이벤트</strong>
           <span>새롭게 가입한 회원 선착순 100명께<br>
-          배송비 무료 쿠폰 제공</span>
+            배송비 무료 쿠폰 제공</span>
         </div>
       </div>
       <div class="swiper-button-prev"></div>
@@ -216,7 +215,7 @@
 
   <footer id="footer">
     <span>(주)TAB TAP</span>
-    <ul> 
+    <ul>
       <li><a href="">개인정보방침</a></li>
       <li><a href="">이용약관</a></li>
       <li><a href=""> 이메일무단수집거부</a></li>
@@ -224,7 +223,7 @@
     </ul>
     <address id="address">
       서울시 강남구 강남대로 22길 008<br>
-대표전화 012-5453-3121
+      대표전화 012-5453-3121
       <span>Copyright @TAB TAP All Rights Reserved</span>
     </address>
   </footer>
