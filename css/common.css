@@ -100,15 +100,15 @@ body {
   height: 52px;
   padding: 0 30px;
   background: rgba(255, 192, 203, 0.388); }
-  #nav_bar > * {
-    display: inline-block;
-    vertical-align: middle; }
   #nav_bar .logo {
     float: left; }
   #nav_bar .menu {
     float: right;
     width: 230px;
     background: red; }
+    #nav_bar .menu > * {
+      display: inline-block;
+      vertical-align: middle; }
     #nav_bar .menu #search_bar {
       padding-top: 7px; }
       #nav_bar .menu #search_bar > * {
@@ -126,23 +126,27 @@ body {
         background: url("../images/common/i-zoom.png") no-repeat top left;
         width: 34px;
         height: 34px; }
-    #nav_bar .menu #menu_btn .btn_wrap {
-      position: relative; }
-      #nav_bar .menu #menu_btn .btn_wrap span {
-        display: inline-block;
-        position: absolute;
-        width: 34px;
-        height: 4px;
-        border-radius: 8px;
-        background: #544542; }
-      #nav_bar .menu #menu_btn .btn_wrap span:nth-child(2) {
-        top: 9px; }
-      #nav_bar .menu #menu_btn .btn_wrap span:nth-child(3) {
-        top: 24px; }
-      #nav_bar .menu #menu_btn .btn_wrap span:nth-child(4) {
-        top: 39px; }
+    #nav_bar .menu #menu_btn {
+      width: 34px;
+      height: 34px; }
+      #nav_bar .menu #menu_btn .btn_wrap {
+        position: relative; }
+        #nav_bar .menu #menu_btn .btn_wrap span {
+          display: inline-block;
+          position: absolute;
+          width: 34px;
+          height: 4px;
+          border-radius: 8px;
+          background: #544542; }
+        #nav_bar .menu #menu_btn .btn_wrap span:nth-child(2) {
+          top: 9px; }
+        #nav_bar .menu #menu_btn .btn_wrap span:nth-child(3) {
+          top: 24px; }
+        #nav_bar .menu #menu_btn .btn_wrap span:nth-child(4) {
+          top: 39px; }
   #nav_bar #navigation {
     background: violet;
+    display: none;
     /* 왜 상단값 안먹지..ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ */ }
     #nav_bar #navigation > span {
       font-size: 18px;
