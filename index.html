@@ -17,17 +17,21 @@
     <header id="header">
       <div id="nav_bar">
         <h1><a href="index.html"><img src="images/common/logox1.png" alt="TAB TAP 로고"></a></h1>
-        <div id="search_bar">
-          <input type="search" class="typing">
-          <input type="button" class="submit_btn">
+        <div class="menu">
+          <div id="search_bar">
+            <input type="search" class="typing">
+            <input type="button" class="submit_btn">
+          </div>
+          <!-- input태그는 스크린 리더기가 알아서 읽어주는지 혹은 검색하기라고 따로 작성해야 하는지 -->
+          <a id="menu_btn" href="" role="button">
+            <span class="blind-b">메뉴 열기</span>
+            <div class="btn_wrap">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
         </div>
-        <!-- input태그는 스크린 리더기가 알아서 읽어주는지 혹은 검색하기라고 따로 작성해야 하는지 -->
-        <a class="menu_btn" href="" role="button">
-          <span class="blind-b">메뉴 열기</span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
         <nav id="gnb">
           <span>로그인이 필요합니다.</span>
           <ul>
@@ -91,7 +95,7 @@
       <!-- role을 넣을 때와 안넣을 때? -->
       <article id="cnt_main">
         <h2 class="blind-b">TAB TAP 소개</h2>
-        <div class="swiper-container">
+        <div id="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div>

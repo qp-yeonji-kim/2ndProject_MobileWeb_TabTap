@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: coreE;
   font-style: normal;
@@ -94,28 +95,47 @@ body {
 #nav_bar {
   position: relative;
   width: 100%;
-  height: 40px;
+  height: 52px;
   background: rgba(255, 192, 203, 0.388); }
-  #nav_bar h1 {
+  #nav_bar > * {
     float: left; }
-  #nav_bar #search_bar, #nav_bar .menu_btn {
-    float: right; }
-  #nav_bar #search_bar .typing {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    width: 200px;
-    height: 38px;
-    border: 2px solid #FFD2C1; }
-  #nav_bar #search_bar .submit_btn {
-    border: none;
-    background: url("../images/common/i-zoom.png") no-repeat top left;
-    width: 34px;
-    height: 34px; }
-  #nav_bar .menu_btn span {
-    width: 20px;
-    height: 3px;
-    background: #544542; }
+  #nav_bar .menu #search_bar {
+    padding-top: 7px; }
+    #nav_bar .menu #search_bar > * {
+      vertical-align: middle; }
+    #nav_bar .menu #search_bar .typing {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      width: 150px;
+      height: 38px;
+      border: 2px solid #FFD2C1; }
+    #nav_bar .menu #search_bar .submit_btn {
+      border: none;
+      background: url("../images/common/i-zoom.png") no-repeat top left;
+      width: 34px;
+      height: 34px; }
+  #nav_bar .menu #menu_btn .btn_wrap {
+    position: relative; }
+    #nav_bar .menu #menu_btn .btn_wrap span {
+      display: inline-block;
+      position: absolute;
+      width: 34px;
+      height: 4px;
+      border-radius: 8px;
+      background: #544542; }
+    #nav_bar .menu #menu_btn .btn_wrap span:nth-child(2) {
+      top: 9px; }
+    #nav_bar .menu #menu_btn .btn_wrap span:nth-child(3) {
+      top: 24px; }
+    #nav_bar .menu #menu_btn .btn_wrap span:nth-child(4) {
+      top: 39px; }
+  #nav_bar #gnb {
+    background: violet;
+    /* 왜 상단값 안먹지..ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ */ }
+    #nav_bar #gnb > span {
+      font-size: 18px;
+      font-weight: 300; }
 
 /*# sourceMappingURL=common.css.map */
