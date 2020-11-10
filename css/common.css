@@ -98,7 +98,7 @@ body {
 #header {
   position: fixed;
   width: 100%;
-  height: 48px;
+  height: 52px;
   padding: 0 30px;
   background: #ffa0b0;
   z-index: 1000;
@@ -114,7 +114,7 @@ body {
       display: inline-block;
       vertical-align: middle; }
     #header .menu #search_bar {
-      padding-top: 7px; }
+      padding-top: 10px; }
       #header .menu #search_bar > * {
         vertical-align: middle; }
       #header .menu #search_bar .typing {
@@ -141,7 +141,8 @@ body {
           width: 34px;
           height: 2px;
           border-radius: 8px;
-          background: #544542; }
+          background: #544542;
+          z-index: 1100; }
         #header .menu #menu_btn .btn_wrap span:nth-child(1) {
           top: 7px; }
         #header .menu #menu_btn .btn_wrap span:nth-child(2) {
@@ -149,26 +150,27 @@ body {
         #header .menu #menu_btn .btn_wrap span:nth-child(3) {
           top: 33px; }
   #header #navigation {
+    display: none;
     position: fixed;
     background: #fff;
     top: 0;
     right: 0;
     bottom: 0;
     width: 80%;
-    padding-top: 14px;
+    padding-top: 7px;
     overflow-y: auto; }
     #header #navigation > p, #header #navigation > span {
       display: inline-block;
       padding-bottom: 21px;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 300;
-      padding-left: 32px;
+      padding-left: 20px;
       line-height: 42px; }
       #header #navigation > p strong, #header #navigation > span strong {
         font-weight: 500; }
       #header #navigation > p img, #header #navigation > span img {
         width: 34px;
-        margin-left: 10px; }
+        margin-left: 8px; }
     #header #navigation .private {
       width: 265px;
       height: 82px;
@@ -199,20 +201,35 @@ body {
       content: "";
       display: block;
       clear: both;
-      padding: 24px 0 0 40px;
+      padding: 24px 0;
       color: #fff;
       background: linear-gradient(135deg, #826b90, #916a5b); }
       #header #navigation #gnb a {
         display: inline-block;
         line-height: 34px; }
+      #header #navigation #gnb > li {
+        position: relative;
+        margin-bottom: 16px; }
+      #header #navigation #gnb > li:not(.direct-link)::after {
+        content: "";
+        position: absolute;
+        right: 60px;
+        top: calc(50% - 3px);
+        border-top: 6px solid rgba(255, 255, 255, 0.8);
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent; }
       #header #navigation #gnb > li > a {
-        margin-bottom: 16px;
+        padding-left: 40px;
         font-family: coreD;
         font-weight: 600;
         font-size: 20px; }
       #header #navigation #gnb li ul {
         display: none;
         margin-bottom: 30px; }
+      #header #navigation #gnb li ul li {
+        padding-left: 40px; }
+      #header #navigation #gnb li.on ul {
+        display: block; }
       #header #navigation #gnb li ul li a {
         font-family: coreE;
         font-weight: 300;
