@@ -85,6 +85,9 @@ header, section, article, footer {
   display: block;
   clear: both; }
 
+:focus {
+  outline: 1px solid red; }
+
 body {
   font-family: coreE;
   font-weight: 400;
@@ -156,7 +159,7 @@ body {
     left: 100%;
     bottom: 0;
     width: 80%;
-    padding-top: 7px;
+    padding: 7px 0 20px 0;
     overflow-y: auto; }
     #header #nav::before {
       content: "";
@@ -259,13 +262,46 @@ body {
           background: -webkit-linear-gradient(90deg, rgba(255, 210, 194, 0.2), transparent);
           background: -o-linear-gradient(90deg, rgba(255, 210, 194, 0.2), transparent);
           background: linear-gradient(90deg, rgba(255, 210, 194, 0.2), transparent); }
-      #header #nav .nav_inner > strong {
+      #header #nav .nav_inner .admin strong {
         display: block;
         width: 80px;
-        margin: 30px 40px 10px;
+        margin: 30px 0 10px 50px;
         font-weight: 400;
-        font-size: 18px; }
-      #header #nav .nav_inner > strong + p, #header #nav .nav_inner > strong + span {
         font-size: 16px; }
+      #header #nav .nav_inner .admin strong + p, #header #nav .nav_inner .admin > strong + span {
+        display: inline-block;
+        margin-left: 30px;
+        font-size: 14px; }
+      #header #nav .nav_inner .admin strong + p {
+        line-height: 24px; }
+
+#cnt_main .swiper-slide {
+  width: 100%;
+  height: 100vh; }
+#cnt_main .intro1 {
+  background: url("../images/main/poster1.jpg"); }
+#cnt_main .intro2 {
+  background: url("../images/main/poster2.jpg"); }
+#cnt_main .intro3 {
+  background: url("../images/main/poster3.jpg"); }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
+  .intro1 {
+    background: url("../images/main/poster1x2.jpg"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
+  .intro1 {
+    background: url("../images/main/poster1x3.jpg"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
+  .intro2 {
+    background: url("../images/main/poster2x2.jpg"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
+  .intro2 {
+    background: url("../images/main/poster2x3.jpg"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
+  .intro3 {
+    background: url("../images/main/poster3x2.jpg"); } }
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
+  .intro3 {
+    background: url("../images/main/poster3x3.jpg"); } }
 
 /*# sourceMappingURL=common.css.map */

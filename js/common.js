@@ -25,7 +25,7 @@ $(document).ready(function () {
       $last.on('keydown', function (e) {
         if (!e.shiftKey && e.keyCode == 9) {
           e.preventDefault();
-          $('.btn_menu').focus();
+          $('#menu_btn').focus();
         }
       });
     }
@@ -35,8 +35,6 @@ $(document).ready(function () {
   /* #gnb depth2 내려오기 */
   $gnb.find('li ul').hide();
   $gnb.find('>li >a').on('click', function () {
-    $gnb.find('>li').removeClass('on').children('ul').hide();
-    $(this).next().show().parent().addClass('on');
     if ($(this).next().length === 0) {
       location.href = $(this).attr('href');
     } else {

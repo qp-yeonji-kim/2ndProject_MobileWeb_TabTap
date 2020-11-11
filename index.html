@@ -16,69 +16,70 @@
 <body>
   <div id="wrap">
     <header id="header">
-        <h1 class="logo"><a href="index.html"><img src="images/common/logox1.png" alt="TAB TAP 로고"></a></h1>
-        <div class="menu">
-          <div id="search_bar">
-            <input type="search" class="typing">
-            <input type="button" class="submit_btn">
-          </div>
-          <!-- input태그는 스크린 리더기가 알아서 읽어주는지 혹은 검색하기라고 따로 작성해야 하는지 -->
-          <a id="menu_btn" href="" role="button">
-            <span class="blind-b">메뉴 열기</span>
-            <div class="btn_wrap">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </a>
+      <h1 class="logo"><a href="index.html"><img src="images/common/logox1.png" alt="TAB TAP 로고"></a></h1>
+      <div class="menu">
+        <div id="search_bar">
+          <input type="search" class="typing">
+          <input type="button" class="submit_btn">
         </div>
-        <nav id="nav">
-          <div class="nav_inner">
-            <p><strong>로그인</strong>이 필요합니다. <a href=""><img src="images/common/i-login.svg" alt="로그인 하기"></a></p>
-            <ul class="private">
-              <li><a href=""><img src="images/common/i-mypage.svg" alt=""><span>나의 페이지</span></a></li>
-              <li><a href=""><img src="images/common/i-cart.svg" alt=""><span>장바구니</span></a></li>
-              <li><a href=""><img src="images/common/i-order.svg" alt=""><span>주문내역</span></a></li>
-            </ul>
-            <ul id="gnb">
-              <li>
-                <a href="">회사소개</a>
-                <ul>
-                  <li><a href="">서비스 안내</a></li>
-                  <li><a href="">협력사 소개</a></li>
-                  <li><a href="">이용방법</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">제품목록 </a>
-                <ul>
-                  <li><a href="">제품검색</a></li>
-                  <li><a href="">WACOM</a></li>
-                  <li><a href="">HUION</a></li>
-                  <li><a href="">XP-PEN</a></li>
-                  <li><a href="">장은테크</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">예약문의</a>
-                <ul>
-                  <li><a href="">제품예약</a></li>
-                  <li><a href="">상담신청</a></li>
-                  <li><a href="">문의내역</a></li>
-                </ul>
-              </li>
-              <li class="direct-link">
-                <a href="">이용후기</a>
-              </li>
-              <li>
-                <a href="">공지사항</a>
-                <ul>
-                  <li><a href="">이벤트</a></li>
-                  <li><a href="">뉴스</a></li>
-                  <li><a href="">안내</a></li>
-                </ul>
-              </li>
-            </ul>
+        <!-- input태그는 스크린 리더기가 알아서 읽어주는지 혹은 검색하기라고 따로 작성해야 하는지 -->
+        <a id="menu_btn" href="" role="button">
+          <span class="blind-b">메뉴 열기</span>
+          <div class="btn_wrap">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+      </div>
+      <nav id="nav">
+        <div class="nav_inner">
+          <p><strong>로그인</strong>이 필요합니다. <a href=""data-link="first"><img src="images/common/i-login.svg" alt="로그인 하기"></a></p>
+          <ul class="private">
+            <li><a href=""><img src="images/common/i-mypage.svg" alt=""><span>나의 페이지</span></a></li>
+            <li><a href=""><img src="images/common/i-cart.svg" alt=""><span>장바구니</span></a></li>
+            <li><a href=""><img src="images/common/i-order.svg" alt=""><span>주문내역</span></a></li>
+          </ul>
+          <ul id="gnb">
+            <li>
+              <a href="">회사소개</a>
+              <ul>
+                <li><a href="">서비스 안내</a></li>
+                <li><a href="">협력사 소개</a></li>
+                <li><a href="">이용방법</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">제품목록 </a>
+              <ul>
+                <li><a href="">제품검색</a></li>
+                <li><a href="">WACOM</a></li>
+                <li><a href="">HUION</a></li>
+                <li><a href="">XP-PEN</a></li>
+                <li><a href="">장은테크</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">예약문의</a>
+              <ul>
+                <li><a href="">제품예약</a></li>
+                <li><a href="">상담신청</a></li>
+                <li><a href="">문의내역</a></li>
+              </ul>
+            </li>
+            <li class="direct-link">
+              <a href="">이용후기</a>
+            </li>
+            <li>
+              <a href="" data-link="last">공지사항</a>
+              <ul>
+                <li><a href="">이벤트</a></li>
+                <li><a href="">뉴스</a></li>
+                <li><a href="" data-link="last">안내</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="admin">
             <strong>이용시간</strong>
             <p>
               평일 오전 9시 ~ 오후 7시<br>
@@ -86,10 +87,11 @@
               일요일, 공휴일 휴무<br>
               점심시간 12시 ~ 1시
             </p>
-            <strong>대표전화 </strong>
+            <strong>대표전화</strong>
             <span>012-5453-3121</span>
           </div>
-        </nav>
+        </div>
+      </nav>
     </header>
 
     <section id="main_section" role="main">
@@ -98,29 +100,23 @@
         <h2 class="blind-b">TAB TAP 소개</h2>
         <div id="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div>
-                <span aria-label="1">01</span>
-                <strong>스테디셀러부터<br>
-                  최신 기기까지,<br>
-                  새로움을 경험해보세요.</strong>
-              </div>
+            <div class="swiper-slide intro1">
+              <span aria-label="1">01</span>
+              <strong>스테디셀러부터<br>
+                최신 기기까지,<br>
+                새로움을 경험해보세요.</strong>
             </div>
-            <div class="swiper-slide">
-              <div>
-                <span aria-label="2">02</span>
-                <strong>타블렛 사용에 필요한<br>
-                  다양한 보조장비와<br>
-                  악세사리도 잊지 마세요.</strong>
-              </div>
+            <div class="swiper-slide intro2">
+              <span aria-label="2">02</span>
+              <strong>타블렛 사용에 필요한<br>
+                다양한 보조장비와<br>
+                악세사리도 잊지 마세요.</strong>
             </div>
-            <div class="swiper-slide">
-              <div>
-                <span aria-label="3">03</span>
-                <strong>전국 14개 지점에<br>
-                  총 56종의<br>
-                  타블렛이 구비되어 있습니다.</strong>
-              </div>
+            <div class="swiper-slide intro3">
+              <span aria-label="3">03</span>
+              <strong>전국 14개 지점에<br>
+                총 56종의<br>
+                타블렛이 구비되어 있습니다.</strong>
             </div>
           </div>
           <div class="swiper-button-next"></div>
