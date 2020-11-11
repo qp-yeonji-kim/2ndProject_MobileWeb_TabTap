@@ -103,7 +103,7 @@ body {
   width: 100%;
   height: 52px;
   padding: 0 30px;
-  background: rgba(255, 160, 176, 0.319);
+  background: rgba(255, 255, 255, 0.3);
   z-index: 1000;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -111,8 +111,7 @@ body {
     float: left; }
   #header .menu {
     float: right;
-    width: 230px;
-    background: red; }
+    width: 230px; }
     #header .menu > * {
       display: inline-block;
       vertical-align: middle; }
@@ -275,15 +274,40 @@ body {
       #header #nav .nav_inner .admin strong + p {
         line-height: 24px; }
 
-#cnt_main .swiper-slide {
+#cnt_main #swiper-container {
   width: 100%;
   height: 100vh; }
-#cnt_main .intro1 {
-  background: url("../images/main/poster1.jpg"); }
-#cnt_main .intro2 {
-  background: url("../images/main/poster2.jpg"); }
-#cnt_main .intro3 {
-  background: url("../images/main/poster3.jpg"); }
+  #cnt_main #swiper-container .swiper-slide {
+    position: relative;
+    background: no-repeat top center;
+    background-size: cover; }
+    #cnt_main #swiper-container .swiper-slide span, #cnt_main #swiper-container .swiper-slide strong {
+      position: absolute;
+      font-weight: 400; }
+    #cnt_main #swiper-container .swiper-slide span {
+      font-size: 40px; }
+    #cnt_main #swiper-container .swiper-slide strong {
+      font-size: 20px; }
+  #cnt_main #swiper-container .intro1 {
+    background-image: url("../images/main/poster1.jpg"); }
+    #cnt_main #swiper-container .intro1 strong {
+      top: 12%;
+      left: 8%; }
+    #cnt_main #swiper-container .intro1 span {
+      top: 28%;
+      left: 11%; }
+    #cnt_main #swiper-container .intro1 span::after {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 1.3px;
+      background: #544542;
+      left: -2px;
+      bottom: -4px; }
+  #cnt_main #swiper-container .intro2 {
+    background-image: url("../images/main/poster2.jpg"); }
+  #cnt_main #swiper-container .intro3 {
+    background-image: url("../images/main/poster3.jpg"); }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
   .intro1 {

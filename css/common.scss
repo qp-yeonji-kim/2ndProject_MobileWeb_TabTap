@@ -81,11 +81,11 @@ header, section, article, footer{display: block;}
 
 body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;}
 #wrap{width: 100%;overflow: hidden;}
-#header{position: fixed;width: 100%;height: 52px;padding: 0 30px;background: rgba(255, 160, 176, 0.319);z-index: 1000;
+#header{position: fixed;width: 100%;height: 52px;padding: 0 30px;background: rgba(255, 255, 255, 0.3);z-index: 1000;
   @include b-box;
   .logo{float: left;}
   .menu{
-    float: right;width: 230px;background: red; 
+    float: right;width: 230px;
     > *{display: inline-block;vertical-align: middle;}
     #search_bar {
       padding-top: 10px;
@@ -156,15 +156,24 @@ body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;}
 }
 
 #cnt_main{
-  .swiper-slide{width: 100%;height: 100vh;}
-  .intro1{
-    background: url("../images/main/poster1.jpg");
-  }
-  .intro2{
-    background: url("../images/main/poster2.jpg");
-  }
-  .intro3{
-    background: url("../images/main/poster3.jpg");
+    #swiper-container{width: 100%;height: 100vh;
+      .swiper-slide{position: relative;background: no-repeat top center;background-size: cover;
+        span, strong{position: absolute;font-weight: 400;}
+        span{font-size: 40px;}
+        strong{font-size: 20px;}
+}
+    .intro1{
+      background-image: url("../images/main/poster1.jpg");
+      strong{top: 12%;left: 8%;}
+      span{top: 28%;left: 11%;}
+      span::after{content: "";position: absolute;width: 140px;height: 1.3px;background: $brown;left: -2px;bottom: -4px;}
+    }
+    .intro2{
+      background-image: url("../images/main/poster2.jpg");
+    }
+    .intro3{
+      background-image: url("../images/main/poster3.jpg");
+    }
   }
 }
 

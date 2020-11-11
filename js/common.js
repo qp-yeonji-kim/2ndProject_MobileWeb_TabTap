@@ -44,4 +44,23 @@ $(document).ready(function () {
     return false;
   });
 
+  /* swiper */
+  var mainSwiper = new Swiper('#cnt_main .swiper-container', {
+    // Optional parameters
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+    },
+  })
 });
