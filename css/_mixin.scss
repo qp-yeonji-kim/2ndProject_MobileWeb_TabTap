@@ -7,3 +7,22 @@
   -webkit-border-radius: $value; 
   border-radius: $value; 
 }
+
+@mixin t-form($value...){
+  -webkit-transform: $value;
+  transform: $value;
+}
+
+@mixin t-sition($value...) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin bg-g($deg, $col1, $col2){
+  background: $col1;
+  background: -webkit-linear-gradient($deg, $col1, $col2);
+  background: -o-linear-gradient($deg, $col1, $col2);
+  background: linear-gradient($deg, $col1, $col2);
+}

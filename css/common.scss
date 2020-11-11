@@ -80,7 +80,7 @@ header, section, article, footer{display: block;}
 
 body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;}
 #wrap{width: 100%;overflow: hidden;}
-#header{position: fixed;width: 100%;height: 52px;padding: 0 30px;background: rgb(255, 160, 176);z-index: 1000;
+#header{position: fixed;width: 100%;height: 52px;padding: 0 30px;background: rgba(255, 160, 176, 0.319);z-index: 1000;
   @include b-box;
   .logo{float: left;}
   .menu{
@@ -98,17 +98,18 @@ body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;}
     }
     #menu_btn{ 
       width: 34px;height: 34px;
-      .btn_wrap{position: relative;
+      .btn_wrap{
         span{display: inline-block;position: absolute;width: 34px;height: 2px;border-radius: 8px;background: $brown;z-index: 1100;}
-        span:nth-child(1){top: 7px;}
-        span:nth-child(2){top: 20px;}
-        span:nth-child(3){top: 33px;}
+        span:nth-child(1){top: 9px;}
+        span:nth-child(2){top: 22px;}
+        span:nth-child(3){top: 35px;}
       }
     }
   }
-  #navigation{
-    display: none;
-    position: fixed;background: #fff;top: 0;right: 0;bottom: 0;width: 80%;padding-top: 7px;overflow-y: auto;
+  #nav{display: none;
+    position: fixed;background: #fff;top: 0;right: 0;left: 100%;bottom: 0;width: 80%;padding-top: 7px;overflow-y: auto;
+    &::before{content: "";position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(255, 255, 255, .7);filter: blur(4px);}
+    .nav_inner{position: relative;background: #fff;
     >p, >span{display: inline-block;padding-bottom: 21px;font-size: 16px;font-weight: 300;padding-left: 20px;line-height: 42px;
       strong{font-weight: 500;}
       img{width: 34px;margin-left: 8px;}}
@@ -125,16 +126,28 @@ body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;}
       @include b-radius(30px 0 0 0);
       content: "";display: block;clear: both;padding: 24px 0;color: #fff;background: linear-gradient(135deg, #826b90, #916a5b);
       a{display: inline-block;line-height: 34px;}
-      >li{position: relative;margin-bottom: 16px;}
-      >li:not(.direct-link)::after{content: "";position: absolute;right: 60px;top: calc(50% - 3px);border-top: 6px solid rgba(255, 255, 255, 0.8);border-left: 4px solid transparent;border-right: 4px solid transparent;}
-      >li > a{padding-left: 40px;font-family: coreD;font-weight: 600;font-size: 20px;}
-      li ul{display: none;margin-bottom: 30px;}
-      li ul li{padding-left: 40px;}
+      >li{margin-bottom: 16px;}
+      >li > a{position: relative;padding: 10px 0;text-indent: 40px;font-family: coreD;font-weight: 600;font-size: 20px;}
+      //가상요소
+      >li:not(.direct-link) > a::after{
+        @include t-sition(all, 0.5s);
+        content: "";position: absolute;right: -60px;top: calc(50% - 3px);border-top: 7px solid rgba(255, 255, 255, 0.8);border-left: 5px solid transparent;border-right: 5px solid transparent;}
+      >li.on:not(.direct-link) > a::after{
+        @include t-form(rotate(180deg));
+      }
+      li ul{margin-bottom: 30px;}
       li.on ul{display: block;}
-      li ul li a{font-family: coreE;font-weight: 300;font-size: 16px;padding: 10px 18px;}
+      li ul li a{padding: 10px 58px;width: 100%;font-family: coreE;font-weight: 300;font-size: 16px;}
+
+      >li >a:focus, >li >a:hover, >li.on >a{text-decoration: underline;}
+      li ul li a:focus, li ul li a:hover{
+        @include bg-g(90deg, rgba(255, 210, 194, 0.2), transparent);
+        //ios, android는 다수의 사용자가 이용중이니 구버전이 있으면 접두사를 붙여준다.
+      }
     }
     > strong{display: block;width: 80px;margin: 30px 40px 10px;font-weight: 400;font-size: 18px;}
     > strong + p, >strong + span {font-size: 16px;}
   }
 }
-//??? margin 0 auto되는 조건, text-align: center되는 조건..
+}
+
