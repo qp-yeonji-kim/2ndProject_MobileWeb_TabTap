@@ -182,17 +182,29 @@ article{margin: 90px 20px 85px;}
 #cnt_main{
   margin: 0;
   .swiper-container{width: 100%;height: 100vh;
+    .swiper-pagination{
+      left: 35%;top: 32%;
+    }
     &.top{
-      .intro1{}
-      .swiper-pagination{top: 50%;right: 8%;}
+      .intro1{
+        img{width: 100%;}
+      }
     }
     &.mid{
-      .intro2{}
-      .swiper-pagination{top: 60%;right: 8%;}
+      .intro2{
+        img{
+          position: absolute;top: 21%;left: 0;
+        }
+      }
+      #controller .swiper-pagination{right: 20%;top: 34%;}
     }
     &.btm{
-      .intro3{}
-      .swiper-pagination{top: 70%;right: 8%;}
+      .intro3{
+        img{
+          position: absolute;bottom: 0;left: 0;
+        }
+      }
+      #controller .swiper-pagination{left: 32%;top: 68%;}
     }
       .swiper-slide{position: relative;background: no-repeat top center;background-size: cover;
         span, strong{position: absolute;font-weight: 400;}
@@ -221,9 +233,10 @@ article{margin: 90px 20px 85px;}
         span::after{content: "";position: absolute;width: 140px;height: 1.3px;background: $brown;left: -2px;bottom: -4px;}
       }
       #controller{
-        .swiper-pagination-bullet{
-          background: $violet;z-index: 10000;
-        }
+        .swiper-pagination-bullet{margin: 0 2px;
+          width: 8px;height: 8px;background: $l-violet;
+          border: 2px solid #fff;opacity: 1;}
+        .swiper-pagination-bullet-active{width: 12px;height: 12px;background: $violet;}
         .play_stop{
           @include t-form(translateY(-50%));
           position: absolute;top: 50%;left: -120px;width: 181px;height: 181px;background: url("../images/main/btn_cir.png") no-repeat center;z-index: 1000;
@@ -243,19 +256,49 @@ article{margin: 90px 20px 85px;}
 
 #cnt_company{
     height: 300px;
-  p span{
+  p {
+    .talk{
     @include bg-g(90deg, $orange, $l-violet);
-    display: inline-block;padding: 0 40px 0 10px;margin-bottom: 3px;font-weight: 400;
-  }
-  ul li{display: float;
-    a{
-      @include b-radius(16px);
-      @include bgsize(cover);
-      display: inline-block;width: 150px;height: 100px;border: 1px solid $l-violet;background: no-repeat center;font-family: coreD;font-size: 20px;line-height: 100px;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
-    a:nth-child(1){
-      background-image: url("../images/main/menu_btn_h.jpg");
+    display: inline-block;margin-bottom: 3px;font-weight: 400;
+    }
+    .talk:nth-child(2){
+      padding: 0 50px 0 10px;
+    }
+    .talk:nth-child(4){
+      padding: 0 10px 0 20px;
+    }
+    .quotation{
+      display: inline-block;margin: 0 0 3px -1px;padding: 1px 0 3px;line-height: 1;background: $orange;font-size: 24px;font-weight: 500;
+    }
+    .quotation:last-child{
+      background: $l-violet;padding-right: 40px;margin-left: -1px;
     }
   }
+  ul{display: block;clear: both;margin: 30px auto 0;width: 312px; //검토
+    li{float: left;margin: 2px;
+      a{
+        @include b-radius(16px);
+        background: no-repeat center; //cover때문인지 더 우선 배열되어야 함.
+        @include bgsize(cover);
+        display: inline-block;width: 150px;height: 100px;border: 1px solid $l-violet;font-family: coreD;font-size: 20px;line-height: 100px;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
+      &:nth-child(1) a{
+        background-image: url("../images/main/menu_btn_w.jpg");
+      }
+      &:nth-child(2) a{
+        background-image: url("../images/main/menu_btn_h.jpg");
+      }
+      &:nth-child(3) a{
+        background-image: url("../images/main/menu_btn_x.jpg");
+      }
+      &:nth-child(4) a{
+        background-image: url("../images/main/menu_btn_j.jpg");
+      }
+    }
+  }
+}
+
+#cnt_best-review{
+  h2{font-weight: 500;font-size: 20px;width: 77px;margin: 0 auto 10px;}
 }
 
 @media
