@@ -34,12 +34,22 @@
   font-weight: 500;
   src: url("../font/CoreGothicD-5Medium.eot");
   src: url("../font/CoreGothicD-5Medium.eot#iefix") format("embedded-opentype"), url("../font/CoreGothicD-5Medium.woff") format("woff"), url("../font/CoreGothicD-5Medium.woff2") format("woff2"), url("../font/CoreGothicD-5Medium.otf") format("opentype"); }
+@font-face {
+  font-family: coreD;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../font/CoreGothicD-9Black.eot");
+  src: url("../font/CoreGothicD-9Black.eot#iefix") format("embedded-opentype"), url("../font/CoreGothicD-9Black.woff") format("woff"), url("../font/CoreGothicD-9Black.woff2") format("woff2"), url("../font/CoreGothicD-9Black.otf") format("opentype"); }
 body, h1, h2, h3, ul, p, button {
   margin: 0;
   padding: 0; }
 
 h1, h2, h3 {
-  font-size: 100%; }
+  font-size: 100%;
+  font-weight: inherit; }
+
+strong {
+  font-weight: inherit; }
 
 ul {
   list-style: none; }
@@ -85,9 +95,6 @@ header, section, article, footer {
   display: block;
   clear: both; }
 
-:focus {
-  outline: 1px solid red; }
-
 body {
   font-family: coreE;
   font-weight: 400;
@@ -132,23 +139,37 @@ body {
         background: url("../images/common/i-zoom.png") no-repeat top left;
         width: 34px;
         height: 34px; }
-    #header .menu #menu_btn {
+  #header .menu_btn {
+    position: relative;
+    width: 34px;
+    height: 34px; }
+    #header .menu_btn .line {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      display: inline-block;
+      position: absolute;
       width: 34px;
-      height: 34px; }
-      #header .menu #menu_btn .btn_wrap span {
-        display: inline-block;
-        position: absolute;
-        width: 34px;
-        height: 2px;
-        border-radius: 8px;
-        background: #544542;
-        z-index: 1100; }
-      #header .menu #menu_btn .btn_wrap span:nth-child(1) {
-        top: 9px; }
-      #header .menu #menu_btn .btn_wrap span:nth-child(2) {
-        top: 22px; }
-      #header .menu #menu_btn .btn_wrap span:nth-child(3) {
-        top: 35px; }
+      height: 2px;
+      border-radius: 8px;
+      background: #544542; }
+    #header .menu_btn .top {
+      top: 9px; }
+    #header .menu_btn .mid {
+      top: 22px; }
+    #header .menu_btn .btm {
+      top: 35px; }
+    #header .menu_btn.act_left .top {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 22px; }
+    #header .menu_btn.act_left .mid {
+      opacity: 0; }
+    #header .menu_btn.act_left .btm {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 22px; }
   #header #nav {
     display: none;
     position: fixed;
@@ -274,58 +295,120 @@ body {
       #header #nav .nav_inner .admin strong + p {
         line-height: 24px; }
 
-#cnt_main #swiper-container {
-  width: 100%;
-  height: 100vh; }
-  #cnt_main #swiper-container .swiper-slide {
-    position: relative;
-    background: no-repeat top center;
-    background-size: cover; }
-    #cnt_main #swiper-container .swiper-slide span, #cnt_main #swiper-container .swiper-slide strong {
-      position: absolute;
-      font-weight: 400; }
-    #cnt_main #swiper-container .swiper-slide span {
-      font-size: 40px; }
-    #cnt_main #swiper-container .swiper-slide strong {
-      font-size: 20px; }
-  #cnt_main #swiper-container .intro1 {
-    background-image: url("../images/main/poster1.jpg"); }
-    #cnt_main #swiper-container .intro1 strong {
-      top: 12%;
-      left: 8%; }
-    #cnt_main #swiper-container .intro1 span {
-      top: 28%;
-      left: 11%; }
-    #cnt_main #swiper-container .intro1 span::after {
-      content: "";
-      position: absolute;
-      width: 140px;
-      height: 1.3px;
-      background: #544542;
-      left: -2px;
-      bottom: -4px; }
-  #cnt_main #swiper-container .intro2 {
-    background-image: url("../images/main/poster2.jpg"); }
-  #cnt_main #swiper-container .intro3 {
-    background-image: url("../images/main/poster3.jpg"); }
+article {
+  margin: 90px 20px 85px; }
+
+#cnt_main {
+  margin: 0; }
+  #cnt_main .swiper-container {
+    width: 100%;
+    height: 100vh; }
+    #cnt_main .swiper-container .swiper-slide {
+      position: relative;
+      background: no-repeat top center;
+      background-size: cover; }
+      #cnt_main .swiper-container .swiper-slide span, #cnt_main .swiper-container .swiper-slide strong {
+        position: absolute;
+        font-weight: 400; }
+      #cnt_main .swiper-container .swiper-slide span {
+        font-size: 40px; }
+      #cnt_main .swiper-container .swiper-slide strong {
+        font-size: 24px; }
+    #cnt_main .swiper-container .intro1 {
+      background-image: url("../images/main/poster1.jpg"); }
+      #cnt_main .swiper-container .intro1 strong {
+        top: 12%;
+        left: 8%; }
+      #cnt_main .swiper-container .intro1 span {
+        top: 28%;
+        left: 11%; }
+      #cnt_main .swiper-container .intro1 span::after {
+        content: "";
+        position: absolute;
+        width: 140px;
+        height: 1.3px;
+        background: #544542;
+        left: -2px;
+        bottom: -4px; }
+    #cnt_main .swiper-container .intro2 {
+      background-image: url("../images/main/poster2.jpg"); }
+    #cnt_main .swiper-container .intro3 {
+      background-image: url("../images/main/poster3.jpg"); }
+  #cnt_main #toolbar {
+    position: fixed;
+    bottom: 5%;
+    right: 8%;
+    z-index: 1000; }
+    #cnt_main #toolbar a {
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      display: block;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      font-family: coreD;
+      font-size: 16px;
+      font-weight: 500;
+      color: #544542;
+      text-align: center;
+      border: 2px solid; }
+    #cnt_main #toolbar ul li:nth-child(1) a {
+      background: #FFD2C1;
+      border-color: #fff; }
+    #cnt_main #toolbar ul li:nth-child(2) a {
+      background: #fff;
+      border-color: #FFD2C1; }
+
+#cnt_company {
+  height: 300px; }
+  #cnt_company p span {
+    background: #FFD2C1;
+    background: -webkit-linear-gradient(90deg, #FFD2C1, #BEABCA);
+    background: -o-linear-gradient(90deg, #FFD2C1, #BEABCA);
+    background: linear-gradient(90deg, #FFD2C1, #BEABCA);
+    display: inline-block;
+    padding: 0 40px 0 10px;
+    margin-bottom: 3px;
+    font-weight: 400; }
+  #cnt_company ul li {
+    display: float; }
+    #cnt_company ul li a {
+      -webkit-border-radius: 16px;
+      border-radius: 16px;
+      -webkit-background-size: cover;
+      background-size: cover;
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      border: 1px solid #BEABCA;
+      background: no-repeat center;
+      font-family: coreD;
+      font-size: 20px;
+      line-height: 100px;
+      text-align: center;
+      font-weight: 900;
+      color: #000;
+      text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; }
+    #cnt_company ul li a:nth-child(1) {
+      background-image: url("../images/main/menu_btn_h.jpg"); }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
   .intro1 {
-    background: url("../images/main/poster1x2.jpg"); } }
+    background-image: url("../images/main/poster1x2.jpg"); }
+
+  .intro2 {
+    background-image: url("../images/main/poster2x2.jpg"); }
+
+  .intro3 {
+    background-image: url("../images/main/poster3x2.jpg"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
   .intro1 {
-    background: url("../images/main/poster1x3.jpg"); } }
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
+    background-image: url("../images/main/poster1x3.jpg"); }
+
   .intro2 {
-    background: url("../images/main/poster2x2.jpg"); } }
-@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
-  .intro2 {
-    background: url("../images/main/poster2x3.jpg"); } }
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
+    background-image: url("../images/main/poster2x3.jpg"); }
+
   .intro3 {
-    background: url("../images/main/poster3x2.jpg"); } }
-@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
-  .intro3 {
-    background: url("../images/main/poster3x3.jpg"); } }
+    background-image: url("../images/main/poster3x3.jpg"); } }
 
 /*# sourceMappingURL=common.css.map */

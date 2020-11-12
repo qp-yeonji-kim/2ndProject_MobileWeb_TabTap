@@ -11,6 +11,7 @@
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -23,13 +24,11 @@
           <input type="button" class="submit_btn">
         </div>
         <!-- input태그는 스크린 리더기가 알아서 읽어주는지 혹은 검색하기라고 따로 작성해야 하는지 -->
-        <a id="menu_btn" href="" role="button">
+        <a class="menu_btn menu_btn_open" href="" role="button">
           <span class="blind-b">메뉴 열기</span>
-          <div class="btn_wrap">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <span class="line top"></span>
+          <span class="line mid"></span>
+          <span class="line btm"></span>
         </a>
       </div>
       <nav id="nav">
@@ -90,6 +89,12 @@
             <strong>대표전화</strong>
             <span>012-5453-3121</span>
           </div>
+          <a class="menu_btn menu_btn_close" href="" role="button">
+            <span class="blind-b">메뉴 닫기</span>
+              <span class="line top"></span>
+              <span class="line mid"></span>
+              <span class="line btm"></span>
+          </a>
         </div>
       </nav>
     </header>
@@ -98,7 +103,7 @@
       <!-- role을 넣을 때와 안넣을 때? -->
       <article id="cnt_main">
         <h2 class="blind-b">TAB TAP 소개</h2>
-        <div id="swiper-container">
+        <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide intro1">
               <span aria-label="1">01</span>
@@ -119,13 +124,18 @@
                 타블렛이 구비되어 있습니다.</strong>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
+        </div>
+        <div id="toolbar">
+          <ul>
+            <li><a href="">이용방법</a></li>
+            <li><a href="">예약하기</a></li>
+          </ul>
         </div>
       </article>
 
       <article id="cnt_company">
         <h2 class="blind-b">회사별 타블렛</h2>
-        <strong>자신에게 맞는 장비를 찾아보세요</strong>
+        <p><span>"자신에게 맞는</span><span>장비를 찾아보세요."</span></p>
         <ul>
           <li><a href="">WACOM</a></li>
           <li><a href="">HUION</a></li>

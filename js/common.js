@@ -2,7 +2,7 @@ $(document).ready(function () {
   /* #nav 좌표 조정하기 */
   var $nav = $('#nav');
   var $gnb = $('#gnb');
-  $('#menu_btn').on('click', function () {
+  $('#header .menu_btn').on('click', function () {
     if ($(this).hasClass('act_left')) { //닫기
       $nav.stop().animate({left: '100%'}, 300, function () {
         $(this).css({display: 'none'}).find('#gnb > li.on').removeClass('on').children('ul').stop().slideUp();
@@ -16,7 +16,6 @@ $(document).ready(function () {
         $first.focus();});
       $first.on('keydown', function (e) {
         console.log(e.keyCode);
-        //shift key, keyCode는 어디서 나온거지?
         if (e.shiftKey && e.keyCode == 9) {
           e.preventDefault();
           $last.focus();
@@ -43,24 +42,4 @@ $(document).ready(function () {
     }
     return false;
   });
-
-  /* swiper */
-  var mainSwiper = new Swiper('#cnt_main .swiper-container', {
-    // Optional parameters
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-    },
-  })
 });

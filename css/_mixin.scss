@@ -26,3 +26,8 @@
   background: -o-linear-gradient($deg, $col1, $col2);
   background: linear-gradient($deg, $col1, $col2);
 }
+
+@mixin bgsize($value...){
+  -webkit-background-size: $value;
+  background-size: $value;
+}
