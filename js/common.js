@@ -2,35 +2,39 @@ $(document).ready(function () {
   /* #nav 좌표 조정하기 */
   var $nav = $('#nav');
   var $gnb = $('#gnb');
-  $('#header .menu_btn').on('click', function () {
-    if ($(this).hasClass('act_left')) { //닫기
-      $nav.stop().animate({left: '100%'}, 300, function () {
+  var $menuBtn = $('#header .menu_btn');
+  $('#header .menu_btn_open').on('click', function(){
+    $menuBtn.addClass('act_left');
+    var $first = $nav.find('[data-link]="first"');
+    var $last = $nav.find('[data-link]="last"');
+
+    $nav.css({display: 'block'}).stop().animate({left: '20%'}, 300, function(){
+      $first.focus();});
+    $first.on('keydown', function(e) {
+      if(e.shiftKey && e.keyCode == 9) {
+        e.preventDefault(); 
+        //e의 용도, 무엇의 기본속성을 막는 것이었더라?
+        $last.focus();
+      }
+    });
+    $last.on('keydown', function (e) {
+      if (!e.shiftKey && e.keyCode == 9) {
+        e.preventDefault();
+        $first.focus();
+      }
+    });
+
+    $('#header .menu_btn_close').on('click', function(){
+      $nav.stop().animate({left: '100%'}, 300, function(){
         $(this).css({display: 'none'}).find('#gnb > li.on').removeClass('on').children('ul').stop().slideUp();
+        $('#header .menu_btn_open').focus();
       });
-      $(this).removeClass('act_left').find('.blind-b').text('메뉴 열기');
-    } else {
-      $(this).addClass('act_left').find('.blind-b').text('메뉴 닫기');
-      var $first = $gnb.find('[data-link="first"]');
-      var $last = $gnb.find('[data-link="last"]');
-      $nav.css({display: 'block'}).stop().animate({left: '20%'}, 300, function () {
-        $first.focus();});
-      $first.on('keydown', function (e) {
-        console.log(e.keyCode);
-        if (e.shiftKey && e.keyCode == 9) {
-          e.preventDefault();
-          $last.focus();
-        }
-      });
-      $last.on('keydown', function (e) {
-        if (!e.shiftKey && e.keyCode == 9) {
-          e.preventDefault();
-          $('#menu_btn').focus();
-        }
-      });
-    }
+      $menuBtn.removeClass('act_left');
+      return false;
+    });
     return false;
   });
-
+  
   /* #gnb depth2 내려오기 */
   $gnb.find('li ul').hide();
   $gnb.find('>li >a').on('click', function () {

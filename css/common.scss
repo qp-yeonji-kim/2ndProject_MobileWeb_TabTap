@@ -110,6 +110,7 @@ body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;}
   }
   .menu_btn{ 
     position: relative;width: 34px;height: 34px;
+    @at-root #header #nav .menu_btn{position: absolute;top: 0px;right: 30px;}
     .line{
       @include t-sition(all 0.3s);
       display: inline-block;position: absolute;width: 34px;height: 2px;border-radius: 8px;background: $brown;}
@@ -142,6 +143,7 @@ body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;}
           & + li{margin-left: 6px;}
           img{width: 40px;padding-top: 10px;}
           span{display: block;padding-top: 6px;}
+          a{display: block;}
         }
       }
       #gnb{
