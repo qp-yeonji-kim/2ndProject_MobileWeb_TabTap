@@ -203,6 +203,10 @@ article{margin: 90px 20px 85px;}
       }
       .intro3{
         background-image: url("../images/main/poster3.jpg");
+        strong{
+          left: 8%;bottom: 9%;}
+        span{left: 8%;bottom: 28%;}
+        span::after{content: "";position: absolute;width: 140px;height: 1.3px;background: $brown;left: -2px;bottom: -4px;}
       }
       #controller{
         .swiper-pagination{

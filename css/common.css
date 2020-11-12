@@ -357,6 +357,20 @@ article {
         bottom: -4px; }
     #cnt_main .swiper-container .intro3 {
       background-image: url("../images/main/poster3.jpg"); }
+      #cnt_main .swiper-container .intro3 strong {
+        left: 8%;
+        bottom: 9%; }
+      #cnt_main .swiper-container .intro3 span {
+        left: 8%;
+        bottom: 28%; }
+      #cnt_main .swiper-container .intro3 span::after {
+        content: "";
+        position: absolute;
+        width: 140px;
+        height: 1.3px;
+        background: #544542;
+        left: -2px;
+        bottom: -4px; }
     #cnt_main .swiper-container #controller .swiper-pagination {
       top: 50%;
       right: 50%; }
