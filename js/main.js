@@ -8,7 +8,17 @@ $(document).ready(function(){
       delay: 2500,
       disableOnInteraction: false,
     },
+    
+    on: {
+      slideChangeTransitionStart: function(){
+        var tgIdx = mainSwiper.activeIndex;
+        if(tgIdx === 0) $('#cnt_main .swiper-container').removeClass('top mid btm').addClass('top');
+        else if (tgIdx === 1) $('#cnt_main .swiper-container').removeClass('top mid btm').addClass('mid');
+        else $('#cnt_main .swiper-container').removeClass('top mid btm').addClass('btm');
+      },
+    }
   });
+
   $('#controller .autoplay').hide();
   $('#controller .autostop').on('click', function(){
     $(this).hide().siblings('button').show();
