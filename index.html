@@ -100,7 +100,7 @@
     </header>
 
     <section id="main_section" role="main">
-      <!-- role을 넣을 때와 안넣을 때? -->
+      <!-- role을 넣을 때와 안넣을 때//모바일 스크린리더가 skip시켜주는 기준이 된다. -->
       <article id="cnt_main">
         <h2 class="blind-b">TAB TAP 소개</h2>
         <div class="swiper-container">
@@ -123,6 +123,11 @@
                 총 56종의<br>
                 타블렛이 구비되어 있습니다.</strong>
             </div>
+          </div>
+          <div id="controller">
+            <div class="swiper-pagination"></div>
+            <button class="autostop play_stop" title="일시정지"><img src="images/main/i-pause.png" alt="일시정지"></button>
+            <button class="autoplay play_stop" title="자동실행"><img src="images/main/i-play.png" alt="자동실행"></button>
           </div>
         </div>
         <div id="toolbar">
