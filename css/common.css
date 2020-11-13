@@ -75,6 +75,9 @@ a:link, a:visited, a:hover, a:focus {
 header, section, article, footer {
   display: block; }
 
+address {
+  font-style: normal; }
+
 .blind-b, .blind-i {
   width: 1px;
   height: 1px;
@@ -609,7 +612,10 @@ article {
   -webkit-border-radius: 20px 20px 0 0;
   border-radius: 20px 20px 0 0;
   width: 100%;
-  height: 350px; }
+  height: 350px;
+  padding: 26px 53px;
+  font-family: coreD;
+  font-size: 12px; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
   .intro1 {

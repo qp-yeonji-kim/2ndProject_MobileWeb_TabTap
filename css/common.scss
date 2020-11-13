@@ -83,6 +83,7 @@ input{font-family: inherit;color: inherit;}
 button{border: none;background: none;font-family: inherit;color: inherit;}
 a:link, a:visited, a:hover, a:focus{text-decoration: none;color: inherit;}
 header, section, article, footer{display: block;}
+address{font-style: normal;}
 
 .blind-b, .blind-i{width: 1px;height: 1px;overflow: hidden;border: none;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 .blind-i{display: inline-block;margin: -1px;}
@@ -357,7 +358,7 @@ article{margin: 90px 20px 85px;}
 #footer{
   @include bg-g(150deg, $l-orange, $l-violet);
   @include b-radius(20px 20px 0 0);
-  width: 100%;height: 350px; 
+  width: 100%;height: 350px; padding: 26px 53px;font-family: coreD;font-size: 12px;
 }
 
 @media
