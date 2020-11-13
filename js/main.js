@@ -28,4 +28,14 @@ $(document).ready(function(){
     $(this).hide().siblings('button').show();
     mainSwiper.autoplay.start();
   });
+
+  var eventSwiper = new Swiper('#cnt_now_event .swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
 });

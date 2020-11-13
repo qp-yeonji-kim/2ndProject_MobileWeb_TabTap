@@ -89,11 +89,15 @@ header, section, article, footer{display: block;}
 .blind-b{position: absolute;}
 .clearfix::after{content: "";display: block;clear: both;}
 
-body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;}
+body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;
+  h2{font-weight: 500;font-size: 20px;margin: 0 auto 10px;}
+}
 #wrap{width: 100%;overflow: hidden;}
 #header{position: fixed;width: 100%;height: 52px;padding: 0 30px;background: rgba(255, 255, 255, 0.5);z-index: 1000;
   @include b-box;
-  .logo{float: left;}
+  .logo{
+    @include t-form(translateY(-50%));
+    top: 50%;position: absolute;float: left;}
   .menu{
     float: right;width: 230px;
     > *{display: inline-block;vertical-align: middle;}
@@ -274,13 +278,13 @@ article{margin: 90px 20px 85px;}
       background: $l-violet;padding-right: 40px;margin-left: -1px;
     }
   }
-  ul{display: block;clear: both;margin: 30px auto 0;width: 312px; //검토
+  ul{display: block;clear: both;margin: 30px auto 0;width: 316px; //검토
     li{float: left;margin: 2px;
       a{
         @include b-radius(16px);
         background: no-repeat center; //cover때문인지 더 우선 배열되어야 함.
         @include bgsize(cover);
-        display: inline-block;width: 150px;height: 100px;border: 1px solid $l-violet;font-family: coreD;font-size: 20px;line-height: 100px;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
+        display: inline-block;width: 150px;height: 100px;border: 2px solid $l-violet;font-family: coreD;font-size: 20px;line-height: 100px;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
       &:nth-child(1) a{
         background-image: url("../images/main/menu_btn_w.jpg");
       }
@@ -298,7 +302,62 @@ article{margin: 90px 20px 85px;}
 }
 
 #cnt_best-review{
-  h2{font-weight: 500;font-size: 20px;width: 77px;margin: 0 auto 10px;}
+  h2{width: 77px;}
+}
+
+#cnt_now_event{
+  margin-left: 0;margin-bottom: 50px;
+  h2{position: relative;width: 63px;padding-left: 20px;
+    &::before{
+      @include bg-g(135deg, $orange, $l-violet);
+      @include b-radius(40px);
+      content: "";position: absolute;z-index: -10;top: -7px;left: -116px;width: 340px;height: 195px;}}
+  .swiper-container{
+    padding-bottom: 30px;
+    .swiper-slide{
+      @include b-radius(0 40px 40px 0);
+      width: 340px;height: 170px;background: right no-repeat;
+        p{padding: 105px 0 0 30px;line-height: 1.2;font-size: 20px;color: #fff;text-shadow: 0 0 4px #000;}
+      
+      &.event1 {background-image: url("../images/main/s-event1.png");
+        span{display: inline-block;font-weight: 300;font-size: 16px;}}
+      &.event2 {background-image: url("../images/main/s-event2.png");}
+      &.event3 {background-image: url("../images/main/s-event3.png");
+        span{font-size: 20px;}
+        p{padding: 90px 0 0 40px;font-size: 16px;font-weight: 300;}
+      }
+    }
+    .swiper-pagination{
+      position: absolute;right: 20px;bottom: 0;
+      .swiper-pagination-bullet{
+        @include b-radius(50%);
+        width: 10px;height: 10px;margin: 3px;background: $l-violet;opacity: 1;
+      }
+      .swiper-pagination-bullet-active{
+        @include b-radius(20px);
+        @include t-sition (width 0.3s);
+        width: 25px;height: 10px;background: $violet;}
+    }
+    .swiper-button-next::after, .swiper-button-prev::after{display: none;}
+    .swiper-button-prev, .swiper-button-next{
+      top: calc(50% - 8px);}
+    .swiper-button-prev{background-image: url("../images/main/i-prev.png");}
+    .swiper-button-next{background-image: url("../images/main/i-next.png");}
+  }
+}
+
+#cnt_social{
+  h2{margin: 0 0 10px 0;}
+  >p{font-weight: 300;font-size: 16px;}
+  ul {
+    li{float: left;}
+  }
+}
+
+#footer{
+  @include bg-g(150deg, $l-orange, $l-violet);
+  @include b-radius(20px 20px 0 0);
+  width: 100%;height: 350px; 
 }
 
 @media
