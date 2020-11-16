@@ -285,9 +285,9 @@ article{margin: 90px 20px 85px;}
 #cnt_company{
     height: 300px;
   p {
-    .talk:nth-child(4){margin-left: 22px;}
+    .talk:nth-child(4){margin-left: 6.666666666666667vw;}
     .quotation{
-      position: relative;display: inline-block;font-family: HDline;font-size: 10vw;font-weight: 500;margin-bottom: 4px;
+      position: relative;display: inline-block;font-family: HDline;font-size: 10vw;font-weight: 500;margin-bottom: 2.222222222222222vw;
         &::before{
           @include bg-g(90deg, $orange, $l-violet);
           content: "";position: absolute;width: 60vw;height: 12.22222222222222vw;z-index: -1;
@@ -363,9 +363,21 @@ article{margin: 90px 20px 85px;}
 }
 
 #cnt_social{
-  h2{margin: 0 0 10px 0;}
-  >p{font-weight: 300;font-size: 16px;}
-  ul {li{float: left;}}
+  >p{font-weight: 300;font-size: $f16;margin-bottom: $f18;}
+  ul {margin: 0 auto;width: 88.88888888888889vw;
+    &::after{content: "";clear: both;display: block;}
+    li{
+      float: left;width: $f100;height: $f100;
+      +li{margin-left: $f4;}
+      &:nth-of-type(4){margin-left: 0;}
+      &:nth-of-type(n+4){margin-top: $f4;}
+      a{@include b-radius($f5);
+      display: block;}
+      img{
+        width: 100%;height: 100%;
+      }
+    }
+  }
 }
 
 #footer{
@@ -401,3 +413,4 @@ screen and (min-resolution: 288dpi)
   .event2 a{background-image: url("../images/main/s-event2x3.png");}
   .event3 a{background-image: url("../images/main/s-event3x3.png");}
 }
+
