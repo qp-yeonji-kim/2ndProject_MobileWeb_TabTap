@@ -544,18 +544,20 @@ article {
       z-index: -10;
       top: -7px;
       left: -116px;
-      width: 340px;
-      height: 195px; }
+      width: 94.44444444444444vw;
+      height: 47.22222222222222vw; }
   #cnt_now_event .swiper-container {
     padding-bottom: 30px; }
     #cnt_now_event .swiper-container .swiper-slide {
       -webkit-border-radius: 0 40px 40px 0;
       border-radius: 0 40px 40px 0;
-      width: 340px;
-      height: 170px;
-      background: right no-repeat; }
+      width: 94.44444444444444vw;
+      height: 47.22222222222222vw;
+      background: left no-repeat; }
       #cnt_now_event .swiper-container .swiper-slide p {
-        padding: 105px 0 0 30px;
+        position: absolute;
+        top: 102.0833333333333vw;
+        left: 29.16666666666667vw;
         line-height: 1.2;
         font-size: 5.5555555556vw;
         color: #fff;
@@ -565,7 +567,7 @@ article {
         #cnt_now_event .swiper-container .swiper-slide.event1 span {
           display: inline-block;
           font-weight: 300;
-          font-size: 16px; }
+          font-size: 4.4444444444vw; }
       #cnt_now_event .swiper-container .swiper-slide.event2 {
         background-image: url("../images/main/s-event2.png"); }
       #cnt_now_event .swiper-container .swiper-slide.event3 {
@@ -574,7 +576,7 @@ article {
           font-size: 5.5555555556vw; }
         #cnt_now_event .swiper-container .swiper-slide.event3 p {
           padding: 90px 0 0 40px;
-          font-size: 16px;
+          font-size: 4.4444444444vw;
           font-weight: 300; }
     #cnt_now_event .swiper-container .swiper-pagination {
       position: absolute;
@@ -640,7 +642,16 @@ article {
     background-image: url("../images/main/poster3x2.jpg"); }
 
   #controller .play_stop {
-    background-image: url("../images/main/btn_cirx2.png"); } }
+    background-image: url("../images/main/btn_cirx2.png"); }
+
+  .event1 {
+    background-image: url("../images/main/s-event1x2.png"); }
+
+  .event2 {
+    background-image: url("../images/main/s-event2x2.png"); }
+
+  .event3 {
+    background-image: url("../images/main/s-event3x2.png"); } }
 @media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx), screen and (min-resolution: 288dpi) {
   .intro1 {
     background-image: url("../images/main/poster1x3.jpg"); }
@@ -652,6 +663,15 @@ article {
     background-image: url("../images/main/poster3x3.jpg"); }
 
   #controller .play_stop {
-    background-image: url("../images/main/btn_cirx3.png"); } }
+    background-image: url("../images/main/btn_cirx3.png"); }
+
+  .event1 {
+    background-image: url("../images/main/s-event1x3.png"); }
+
+  .event2 {
+    background-image: url("../images/main/s-event2x3.png"); }
+
+  .event3 {
+    background-image: url("../images/main/s-event3x3.png"); } }
 
 /*# sourceMappingURL=common.css.map */
