@@ -638,12 +638,29 @@ article {
     #cnt_social ul li:nth-of-type(n+4) {
       margin-top: 1.1111111111vw; }
     #cnt_social ul li a {
-      -webkit-border-radius: 1.3888888889vw;
-      border-radius: 1.3888888889vw;
-      display: block; }
+      position: relative; }
+      #cnt_social ul li a::before {
+        -webkit-border-radius: 5.5555555556vw;
+        border-radius: 5.5555555556vw;
+        content: "";
+        position: absolute;
+        width: 90vw;
+        height: 90vw;
+        border: 1px solid #fff; }
+      #cnt_social ul li a::after {
+        content: "";
+        position: absolute; }
     #cnt_social ul li img {
+      -webkit-border-radius: 5.5555555556vw;
+      border-radius: 5.5555555556vw;
       width: 100%;
       height: 100%; }
+      #cnt_social ul li img::after {
+        content: "";
+        position: absolute; }
+    #cnt_social ul li:nth-of-type(1) img, #cnt_social ul li:nth-of-type(6) img {
+      -webkit-border-radius: 1.3888888889vw;
+      border-radius: 1.3888888889vw; }
 
 #footer {
   background: #FFEDE7;
