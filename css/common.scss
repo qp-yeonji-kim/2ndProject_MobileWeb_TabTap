@@ -285,30 +285,22 @@ article{margin: 90px 20px 85px;}
 #cnt_company{
     height: 300px;
   p {
-    .talk{
-    @include bg-g(90deg, $orange, $l-violet);
-    display: inline-block;margin-bottom: 3px;
-    }
-    .talk:nth-child(2){
-      padding: 0 50px 0 10px;
-    }
-    .talk:nth-child(4){
-      padding: 0 10px 0 20px;
-    }
+    .talk:nth-child(4){margin-left: 22px;}
     .quotation{
-      display: inline-block;margin: 0 0 3px -1px;padding: 1px 0 3px;line-height: 1;font: HDline;font-size: 6.666666666666667vw;font-weight: 500;
-    }
-    .quotation:last-child{
-      padding-right: 40px;margin-left: -1px;
+      position: relative;display: inline-block;font-family: HDline;font-size: 11.11111111111111vw;font-weight: 500;margin-bottom: 4px;
+        &::before{
+          @include bg-g(90deg, $orange, $l-violet);
+          content: "";position: absolute;width: 60vw;height: 12.22222222222222vw;z-index: -1;
+        }
+        &:nth-child(5)::before{left: 16px;margin-left: -52vw;}
     }
   }
-  ul{display: block;clear: both;margin: 30px auto 0;width: 316px; //검토
+  ul{display: block;clear: both;margin: 30px auto 0;width: 87.77777777777778vw;
     li{float: left;margin: 2px;
       a{
         @include b-radius(16px);
-        background: no-repeat center; //cover때문인지 더 우선 배열되어야 함.
         @include bgsize(cover);
-        display: inline-block;width: 150px;height: 100px;border: 2px solid $l-violet;font-family: coreD;font-size: $f20;line-height: 100px;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
+        display: inline-block;width: 41.66666666666667vw;height: 27.77777777777778vw;background: no-repeat center; border: $f2 solid $l-violet;font-family: coreD;font-size: $f20;line-height: 27.77777777777778vw;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
       &:nth-child(1) a{
         background-image: url("../images/main/menu_btn_w.jpg");
       }
@@ -326,12 +318,12 @@ article{margin: 90px 20px 85px;}
 }
 
 #cnt_best-review{
-  h2{width: 77px;}
+  h2{width: 21.38888888888889vw;}
 }
 
 #cnt_now_event{
   margin-left: 0;margin-bottom: 50px;
-  h2{position: relative;width: 63px;padding-left: 20px;
+  h2{position: relative;width: 17.5vw;padding-left: 20px;
     &::before{
       @include bg-g(135deg, $orange, $l-violet);
       @include b-radius(40px);
@@ -381,7 +373,7 @@ article{margin: 90px 20px 85px;}
 #footer{
   @include bg-g(150deg, $l-orange, $l-violet);
   @include b-radius(20px 20px 0 0);
-  width: 100vw;height: 350px; padding: 26px 53px;font-family: coreD;font-size: 12px;box-sizing: border-box;
+  width: 100vw;height: 300px; padding: 26px 53px;font-family: coreD;font-size: 12px;box-sizing: border-box;
 }
 
 @media
