@@ -90,11 +90,11 @@ address{font-style: normal;}
 .blind-b{position: absolute;}
 .clearfix::after{content: "";display: block;clear: both;}
 
-body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;
-  h2{font-weight: 500;font-size: 20px;margin: 0 auto 10px;}
+body{font-family: coreE;font-weight: 400;font-size: $f20;color: $brown;
+  h2{font-weight: 500;margin: 0 auto 10px;}
 }
-#wrap{width: 100%;overflow: hidden;}
-#header{position: fixed;width: 100%;height: 52px;padding: 0 30px;background: rgba(255, 255, 255, 0.5);z-index: 1000;
+#wrap{width: 100vw;overflow: hidden;}
+#header{position: fixed;width: 100vw;height: 52px;padding: 0 30px;background: rgba(255, 255, 255, 0.5);z-index: 1000;
   @include b-box;
   .logo{
     @include t-form(translateY(-50%));
@@ -157,7 +157,7 @@ body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;
         content: "";display: block;clear: both;padding: 24px 0;color: #fff;background: linear-gradient(135deg, #826b90, #916a5b);
         a{display: inline-block;line-height: 34px;}
         >li{margin-bottom: 16px;}
-        >li > a{position: relative;padding: 10px 0;text-indent: 40px;font-family: coreD;font-weight: 600;font-size: 20px;}
+        >li > a{position: relative;padding: 10px 0;text-indent: 40px;font-family: coreD;font-weight: 600;}
         //가상요소
         >li:not(.direct-link) > a::after{
           @include t-sition(all, 0.5s);
@@ -186,13 +186,13 @@ body{font-family: coreE;font-weight: 400;font-size: 20px;color: $brown;
 article{margin: 90px 20px 85px;}
 #cnt_main{
   margin: 0;
-  .swiper-container{width: 100%;height: 100vh;
+  .swiper-container{width: 100vw;height: 100vh;
     .swiper-pagination{
       left: 35%;top: 32%;
     }
     &.top{
       .intro1{
-        img{width: 100%;}
+        img{width: 100vw;}
       }
     }
     &.mid{
@@ -212,30 +212,31 @@ article{margin: 90px 20px 85px;}
       #controller .swiper-pagination{left: 32%;top: 68%;}
     }
       .swiper-slide{position: relative;background: no-repeat top center;background-size: cover;
-        span, strong{position: absolute;font-weight: 400;}
-        span{font-size: 40px;}
-        strong{font-size: 24px;}
+        span, strong{position: absolute;}
+        span{font-size: 11.11111111111111vw;}
+        span::after{content: "";position: absolute;bottom: -4px;width: 38.88888888888889vw;height: 0.3611111111111111vh;background: $brown;}
+        strong{font-size: 6.666666666666667vw;}
       }
       .intro1{
         background-image: url("../images/main/poster1.jpg");
-        strong{top: 12%;left: 8%;}
-        span{top: 28%;left: 11%;}
-        span::after{content: "";position: absolute;width: 140px;height: 1.3px;background: $brown;left: -2px;bottom: -4px;}
+        strong{left: 8%;top: 12%;}
+        span{left: 11%;top: 28%;}
+        span::after{left: -2px;}
       }
       .intro2{
         background-image: url("../images/main/poster2.jpg");
         strong{
           @include t-form(translateY(-50%));
           top: 50%;right: 8%;text-align: right;}
-        span{top: 30%;right: 11%;}
-        span::after{content: "";position: absolute;width: 140px;height: 1.3px;background: $brown;right: -2px;bottom: -4px;}
+        span{right: 11%;top: 30%;}
+        span::after{right: 2px;}
       }
       .intro3{
         background-image: url("../images/main/poster3.jpg");
         strong{
           left: 8%;bottom: 9%;}
         span{left: 8%;bottom: 28%;}
-        span::after{content: "";position: absolute;width: 140px;height: 1.3px;background: $brown;left: -2px;bottom: -4px;}
+        span::after{left: -2px;}
       }
       #controller{
         .swiper-pagination-bullet{margin: 0 2px;
@@ -244,7 +245,7 @@ article{margin: 90px 20px 85px;}
         .swiper-pagination-bullet-active{width: 12px;height: 12px;background: $violet;}
         .play_stop{
           @include t-form(translateY(-50%));
-          position: absolute;top: 50%;left: -120px;width: 181px;height: 181px;background: url("../images/main/btn_cir.png") no-repeat center;z-index: 1000;
+          position: absolute;top: 50%;left: -120px;width: 50.27777777777778vw;height: 50.27777777777778vh;background: url("../images/main/btn_cir.png") no-repeat center;z-index: 1000;
         img{width: 14px;height: 25px;padding-left: 100px;}
         }
       }
@@ -285,7 +286,7 @@ article{margin: 90px 20px 85px;}
         @include b-radius(16px);
         background: no-repeat center; //cover때문인지 더 우선 배열되어야 함.
         @include bgsize(cover);
-        display: inline-block;width: 150px;height: 100px;border: 2px solid $l-violet;font-family: coreD;font-size: 20px;line-height: 100px;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
+        display: inline-block;width: 150px;height: 100px;border: 2px solid $l-violet;font-family: coreD;font-size: $f20;line-height: 100px;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
       &:nth-child(1) a{
         background-image: url("../images/main/menu_btn_w.jpg");
       }
@@ -318,13 +319,13 @@ article{margin: 90px 20px 85px;}
     .swiper-slide{
       @include b-radius(0 40px 40px 0);
       width: 340px;height: 170px;background: right no-repeat;
-        p{padding: 105px 0 0 30px;line-height: 1.2;font-size: 20px;color: #fff;text-shadow: 0 0 4px #000;}
+        p{padding: 105px 0 0 30px;line-height: 1.2;font-size: $f20;color: #fff;text-shadow: 0 0 4px #000;}
       
       &.event1 {background-image: url("../images/main/s-event1.png");
         span{display: inline-block;font-weight: 300;font-size: 16px;}}
       &.event2 {background-image: url("../images/main/s-event2.png");}
       &.event3 {background-image: url("../images/main/s-event3.png");
-        span{font-size: 20px;}
+        span{font-size: $f20;}
         p{padding: 90px 0 0 40px;font-size: 16px;font-weight: 300;}
       }
     }
@@ -358,7 +359,7 @@ article{margin: 90px 20px 85px;}
 #footer{
   @include bg-g(150deg, $l-orange, $l-violet);
   @include b-radius(20px 20px 0 0);
-  width: 100%;height: 350px; padding: 26px 53px;font-family: coreD;font-size: 12px;
+  width: 100vw;height: 350px; padding: 26px 53px;font-family: coreD;font-size: 12px;box-sizing: border-box;
 }
 
 @media
