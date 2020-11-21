@@ -13,12 +13,13 @@ article{margin: 90px 20px 85px;}
       }
     }
     #controller{
-      .swiper-pagination-bullet{margin: 0 $f2;width: 2.222222222222222vw;height: 2.222222222222222vw;background: $l-violet;border: $f2 solid #fff;opacity: 1;}
+      .swiper-pagination-bullet{margin: 0 $f2;width: $f8;height: $f8;background: $l-violet;border: $f2 solid #fff;opacity: 1;}
       .swiper-pagination-bullet-active{width: 3.333333333333333vw;height: 3.333333333333333vw;background: $violet;}
       .play_stop{
         @include t-form(translateY(-50%));
-        position: absolute;top: 50%;left: -120px;width: 50.27777777777778vw;height: 50.27777777777778vw;background: url("../images/main/btn_cir.png") no-repeat center;z-index: 1000;
-        img{width: 14px;height: 25px;padding-left: 100px;}
+        @include bgsize(cover);
+        position: absolute;top: 50%;left: -$f120;width: $f181;height: $f181;max-width: 3$f50;max-height: 3$f50;background: url("../images/main/btn_cir.png") no-repeat center;z-index: 1000;
+        img{width: $f14;height: $f25;max-width: 25.2px;max-height: 45px;padding-left: $f100;}
       }
     }
     &.top{
@@ -35,7 +36,7 @@ article{margin: 90px 20px 85px;}
     &.mid{
       .intro2{
         background-image: url("../images/main/poster2.jpg");
-        img{position: absolute;top: 21%;left: 0; }
+        img{position: absolute;top: 22%;left: 0;}
         .info{top: 55vw;right: 10vw;text-align: right;
           span{right: $f8;}
           span::after{right: $f6;}
@@ -55,59 +56,50 @@ article{margin: 90px 20px 85px;}
       #controller .swiper-pagination{bottom: 45vw;left: 39vw;}
     }
   }
-    #toolbar{position: fixed;bottom: 5%;right: 8%;z-index: 900;
+    #toolbar{position: fixed;bottom: 3%;right: 6%;z-index: 900;
       li{
         @include b-radius(50%);
-        display: block;width: 16.66666666666667vw;height: 16.66666666666667vw;text-align: center;border: $f2 solid;
-      }
-      a{position: relative;display: block;width: 100%;height: 100%;line-height: 16.66666666666667vw;font-family: coreD;font-size: $f14;font-weight: 500;color: $brown;z-index: 1;}
-    ul li:nth-child(1){background: $orange;border-color: #fff;}
-    ul li:nth-child(2){background: #fff;border-color: $orange;}
-    ul li a::before{
-      @include bgsize(80%);
-      content: "";
-      opacity: 0.5;position: absolute;top: 0;right: 0;bottom: 0;left: 0;z-index: -1;
-    }
-    ul li:nth-child(1) a::before{
-      background: url("../images/main/i-how.png")no-repeat center;
-    }
-    ul li:nth-child(2) a::before{
-      background: url("../images/main/i-reserve.png")no-repeat center;
+        position: relative;display: block;width: $f60;height: $f60;max-width: 100px;max-height: 100px;text-align: center;border: $f2 solid;
+        &:nth-child(1){background: $orange;border-color: #fff;}
+        &:nth-child(2){background: #fff;border-color: $orange;}
+        &::after{
+          @include bgsize(contain);
+          @include t-form(translate(-50%, -50%));
+          content: "";opacity: 0.5;position: absolute;width: 80%;height: 80%;top: 50%;left: 50%;z-index: 10;}
+        &:nth-of-type(1)::after{
+          background: url("../images/main/i-how.png")no-repeat center;}
+        &:nth-of-type(2)::after{
+          background: url("../images/main/i-reserve.png")no-repeat center;}
+      a{
+        @include b-box;
+        @include t-form(translateY(-50%));
+        display: block;position: relative;top: 50%;font-family: coreD;font-size: $f14;line-height: $f18;text-align: center;font-weight: 500;color: $brown;z-index: 20;}
     }
   }
 }
 
-#cnt_company{
-    height: 300px;
+#cnt_company{height: 300px;
   p {
-    .talk:nth-child(4){margin-left: 6.666666666666667vw;}
+    .talk:nth-child(4){margin-left: $f24;}
     .quotation{
-      position: relative;display: inline-block;font-family: HDline;font-size: 10vw;font-weight: 500;margin-bottom: 2.222222222222222vw;
+      position: relative;display: inline-block;font-family: HDline;font-size: 10vw;font-weight: 500;line-height: 1;margin-bottom: $f8;
         &::before{
           @include bg-g(90deg, $orange, $l-violet);
-          content: "";position: absolute;width: 60vw;height: 12.22222222222222vw;z-index: -1;
+          content: "";position: absolute;width: 60vw;height: $f40;z-index: -1;opacity: 0.8;
         }
-        &:nth-child(5)::before{left: 16px;margin-left: -52vw;width: 68vw;}
+        &:nth-child(5)::before{left: $f16;margin-left: -52vw;width: 68vw;}
     }
   }
   ul{display: block;clear: both;margin: 30px auto 0;width: 87.77777777777778vw;
     li{float: left;margin: 2px;
       a{
-        @include b-radius(16px);
+        @include b-radius($f16);
         @include bgsize(cover);
-        display: inline-block;width: 41.66666666666667vw;height: 27.77777777777778vw;background: no-repeat center; border: $f2 solid $l-violet;font-family: coreD;font-size: $f20;line-height: 27.77777777777778vw;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
-      &:nth-child(1) a{
-        background-image: url("../images/main/menu_btn_w.jpg");
-      }
-      &:nth-child(2) a{
-        background-image: url("../images/main/menu_btn_h.jpg");
-      }
-      &:nth-child(3) a{
-        background-image: url("../images/main/menu_btn_x.jpg");
-      }
-      &:nth-child(4) a{
-        background-image: url("../images/main/menu_btn_j.jpg");
-      }
+        display: inline-block;width: 41.66666666666667vw;height: $f100;background: no-repeat center; border: $f2 solid $l-violet;font-family: coreD;font-size: $f20;line-height: $f100;text-align: center;font-weight: 900;color: #000;text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;}
+      &:nth-child(1) a{background-image: url("../images/main/menu_btn_w.jpg");}
+      &:nth-child(2) a{background-image: url("../images/main/menu_btn_h.jpg");}
+      &:nth-child(3) a{background-image: url("../images/main/menu_btn_x.jpg");}
+      &:nth-child(4) a{background-image: url("../images/main/menu_btn_j.jpg");}
     }
   }
 }
@@ -117,12 +109,12 @@ article{margin: 90px 20px 85px;}
 }
 
 #cnt_now_event{
-  margin-left: 0;margin-bottom: 50px;
+  margin-left: 0;margin-bottom: $f50;
   h2{position: relative;width: 17.5vw;padding-left: 20px;
     &::before{
       @include bg-g(135deg, $orange, $l-violet);
       @include b-radius($f40);
-      content: "";position: absolute;z-index: -10;top: -7px;left: -116px;width: 94.44444444444444vw;height: 47.22222222222222vw;}}
+      content: "";position: absolute;z-index: -10;top: -7px;left: -1$f16;width: 94.44444444444444vw;height: 47.22222222222222vw;}}
   .swiper-container{
     padding-bottom: $f30;
     .swiper-slide{
@@ -148,7 +140,7 @@ article{margin: 90px 20px 85px;}
       .swiper-pagination-bullet-active{
         @include b-radius($f20);
         @include t-sition (width 0.3s);
-        width: 6.944444444444444vw;height: 2.777777777777778vw;background: $violet;}
+        width: 6.944444444444444vw;height: $f100;background: $violet;}
     }
     .swiper-button-next::after, .swiper-button-prev::after{display: none;}
     .swiper-button-prev, .swiper-button-next{top: calc(50% - 8px);}
@@ -170,7 +162,7 @@ article{margin: 90px 20px 85px;}
       position: relative;
       &::before{
         @include b-radius($f20);
-        content: "";position: absolute;width: 90vw;height: 90vw;border: 1px solid #fff;}//테두리
+        content: "";position: absolute;width: 90vw;height: 90vw;border: $f1 solid #fff;}//테두리
       &::after{content: "";position: absolute;}//이모티콘
       }
       img{

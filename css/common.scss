@@ -101,83 +101,83 @@ address{font-style: normal;}
 .clearfix::after{content: "";display: block;clear: both;}
 
 body{font-family: coreE;font-weight: 400;font-size: $f20;color: $brown;
-  h2{font-weight: 500;margin: 0 auto 10px;}
+  h2{font-weight: 500;margin: 0 auto $f10;}
 }
 #wrap{width: 100vw;overflow: hidden;}
-#header{position: fixed;width: 100vw;height: 52px;padding: 0 30px;background: rgba(255, 255, 255, 0.5);z-index: 1000;
+#header{position: fixed;width: 100vw;height: $f52;padding: 0 $f30;background: rgba(255, 255, 255, 0.6);z-index: 1000;
   @include b-box;
   .logo{
     @include t-form(translateY(-50%));
-    top: 50%;position: absolute;float: left;}
+    position: absolute;float: left;top: 50%;}
   .menu{
-    float: right;width: 230px;
+    float: right;width: $f230;
     > *{display: inline-block;vertical-align: middle;}
     #search_bar {
-      padding-top: 10px;
+      padding-top: $f10;
       > *{vertical-align: middle;}
       .typing{
         @include b-box;
-        @include b-radius(20px);
-        width: 150px;height: 34px;border: 2px solid $orange;}
+        @include b-radius($f16);
+        width: $f150;height: $f34;border: $f2 solid $orange;}
       .submit_btn{
-        border: none;background: url("../images/common/i-zoom.png") no-repeat top left;width: 34px;height: 34px;}
+        border: none;background: url("../images/common/i-zoom.png") no-repeat top left;width: $f34;height: $f34;}
     }
   }
   .menu_btn{ 
-    position: relative;width: 34px;height: 34px;
-    @at-root #header #nav .menu_btn{position: absolute;top: 0px;right: 30px;}
+    position: relative;width: $f34;height: $f34;
+    @at-root #header #nav .menu_btn{position: absolute;top: 0px;right: $f30;}
     .line{
       @include t-sition(all 0.3s);
-      display: inline-block;position: absolute;width: 34px;height: 2px;border-radius: 8px;background: $brown;}
-    .top{top: 9px;}
-    .mid{top: 22px;}
-    .btm{top: 35px;}
+      display: inline-block;position: absolute;width: $f34;height: $f2;border-radius: $f8;background: $brown;}
+    .top{top: $f9;}
+    .mid{top: $f22;}
+    .btm{top: $f35;}
     &.act_left{
-      .line{width: 38px;}
+      .line{width: $f38;}
       .top{
         @include t-form(rotate(45deg));
-        top: 29px;
+        top: $f29;
       }
       .mid{opacity: 0;}
       .btm{
         @include t-form(rotate(-45deg));
-        top: 29px;
+        top: $f29;
       }
     }
   }
   #nav{display: none;
     position: fixed;top: 0;right: 0;left: 100%;bottom: 0;width: 80%;overflow-y: auto;
     &::before{content: "";position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0, 0, 0, .7);}
-    .nav_inner{position: relative;padding: 7px 0 20px 0;background: #fff;
-      >p, >span{display: inline-block;padding-bottom: 21px;font-size: 16px;font-weight: 300;padding-left: 20px;line-height: 42px;
+    .nav_inner{position: relative;padding: $f7 0 $f20 0;background: #fff;
+      >p, >span{display: inline-block;padding-bottom: $f21;font-size: $f16;font-weight: 300;padding-left: $f20;line-height: $f42;
         strong{font-weight: 500;}
-        img{width: 34px;margin-left: 8px;}}
-      .private{width: 265px;height: 82px;margin: 0 auto 25px; 
+        img{width: $f34;margin-left: $f8;}}
+      .private{width: $f265;height: $f82;margin: 0 auto $f25; 
         li{
-          @include b-radius(10px);
-          float: left;width: 70px;height: 70px;font-family: coreD;font-weight: 500;font-size: $f14;color: $violet;text-align: center;border: 2px solid $l-violet;
-          & + li{margin-left: 6px;}
-          img{width: 40px;padding-top: 10px;}
-          span{display: block;padding-top: 6px;}
+          @include b-radius($f10);
+          float: left;width: $f70;height: $f70;padding-bottom: $f8;font-family: coreD;font-weight: 500;font-size: $f12;color: $violet;text-align: center;border: $f2 solid $l-violet;
+          & + li{margin-left: $f6;}
+          img{width: $f40;padding-top: $f10;}
+          span{display: block;padding-top: $f6;}
           a{display: block;}
         }
       }
       #gnb{
-        @include b-radius(30px 0 0 0);
-        content: "";display: block;clear: both;padding: 24px 0;color: #fff;background: linear-gradient(135deg, #826b90, #916a5b);
-        a{display: inline-block;line-height: 34px;}
-        >li{margin-bottom: 16px;}
-        >li > a{position: relative;padding: 10px 0;text-indent: 40px;font-family: coreD;font-weight: 600;}
+        @include b-radius($f30 0 0 0);
+        content: "";display: block;clear: both;padding: $f24 0;color: #fff;background: linear-gradient(135deg, #826b90, #916a5b);
+        a{display: inline-block;line-height: $f34;}
+        >li{margin-bottom: $f16;}
+        >li > a{position: relative;padding: $f10 0;text-indent: $f40;font-family: coreD;font-weight: 500;}
         //가상요소
         >li:not(.direct-link) > a::after{
           @include t-sition(all, 0.5s);
-          content: "";position: absolute;right: -60px;top: calc(50% - 3px);border-top: 7px solid rgba(255, 255, 255, 0.8);border-left: 5px solid transparent;border-right: 5px solid transparent;}
+          content: "";position: absolute;right: -$f60;top: calc(50% - 3px);border-top: $f7 solid rgba(255, 255, 255, 0.8);border-left: $f5 solid transparent;border-right: $f5 solid transparent;}
         >li.on:not(.direct-link) > a::after{
           @include t-form(rotate(180deg));
         }
-        li ul{margin-bottom: 30px;}
+        li ul{margin-bottom: $f30;}
         li.on ul{display: block;}
-        li ul li a{padding: 10px 58px;width: 100%;font-family: coreE;font-weight: 300;font-size: 16px;}
+        li ul li a{padding: $f10 $f58;width: 100%;font-family: coreE;font-weight: 300;font-size: $f16;}
 
         >li >a:focus, >li >a:hover, >li.on >a{text-decoration: underline;}
         li ul li a:focus, li ul li a:hover{
@@ -185,9 +185,9 @@ body{font-family: coreE;font-weight: 400;font-size: $f20;color: $brown;
         }
       }
       .admin{
-        strong{display: block;width: 80px;margin: 30px 0 10px 50px;font-weight: 400;font-size: 16px;}
-        strong + p, >strong + span {display: inline-block;margin-left: 30px;font-size: 14px;}
-        strong + p {line-height: 24px;}
+        strong{display: block;width: $f80;margin: $f30 0 $f10 $f50;font-weight: 400;font-size: $f16;}
+        strong + p, >strong + span {display: inline-block;margin-left: $f30;font-size: $f14;}
+        strong + p {line-height: $f24;}
       }
     }
   }
@@ -196,8 +196,8 @@ body{font-family: coreE;font-weight: 400;font-size: $f20;color: $brown;
 
 #footer{
   @include bg-g(150deg, $l-orange, $l-violet);
-  @include b-radius(20px 20px 0 0);
-  width: 100vw;height: 300px; padding: 26px 53px;font-family: coreD;font-size: 12px;box-sizing: border-box;
+  @include b-radius($f20 $f20 0 0);
+  width: 100vw;height: $f300; padding: $f26 $f52;font-family: coreD;font-size: $f12;box-sizing: border-box;
 }
 
 @media
