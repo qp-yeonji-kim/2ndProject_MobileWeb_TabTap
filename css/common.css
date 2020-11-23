@@ -37,6 +37,12 @@
 @font-face {
   font-family: coreD;
   font-style: normal;
+  font-weight: 600;
+  src: url("../font/CoreGothicD-6Bold.eot");
+  src: url("../font/CoreGothicD-6Bold.eot#iefix") format("embedded-opentype"), url("../font/CoreGothicD-6Bold.woff") format("woff"), url("../font/CoreGothicD-6Bold.woff2") format("woff2"), url("../font/CoreGothicD-6Bold.otf") format("opentype"); }
+@font-face {
+  font-family: coreD;
+  font-style: normal;
   font-weight: 900;
   src: url("../font/CoreGothicD-9Black.eot");
   src: url("../font/CoreGothicD-9Black.eot#iefix") format("embedded-opentype"), url("../font/CoreGothicD-9Black.woff") format("woff"), url("../font/CoreGothicD-9Black.woff2") format("woff2"), url("../font/CoreGothicD-9Black.otf") format("opentype"); }
@@ -149,8 +155,10 @@ body {
         border-radius: 4.4444444444vw;
         width: 41.6666666667vw;
         height: 9.4444444444vw;
-        border: 0.5555555556vw solid #FFD2C1; }
+        border: 0.5555555556vw solid #ffd2c2; }
       #header .menu #search_bar .submit_btn {
+        -webkit-background-size: cover !important;
+        background-size: cover !important;
         border: none;
         background: url("../images/common/i-zoom.png") no-repeat top left;
         width: 9.4444444444vw;

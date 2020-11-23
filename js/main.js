@@ -38,4 +38,8 @@ $(document).ready(function(){
       el: '.swiper-pagination',
     },
   });
+
+  var reviewSwiper = new Swiper('#cnt_best-review .swiper-container', {
+
+  });
 });

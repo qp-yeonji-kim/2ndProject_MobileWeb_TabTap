@@ -66,6 +66,16 @@
 @font-face{
   font-family: coreD;
   font-style: normal;
+  font-weight: 600;
+  src: url("../font/CoreGothicD-6Bold.eot");
+  src: url("../font/CoreGothicD-6Bold.eot#iefix") format("embedded-opentype"),
+  url("../font/CoreGothicD-6Bold.woff") format("woff"),
+  url("../font/CoreGothicD-6Bold.woff2") format("woff2"),
+  url("../font/CoreGothicD-6Bold.otf") format("opentype");
+}
+@font-face{
+  font-family: coreD;
+  font-style: normal;
   font-weight: 900;
   src: url("../font/CoreGothicD-9Black.eot");
   src: url("../font/CoreGothicD-9Black.eot#iefix") format("embedded-opentype"),
@@ -120,6 +130,7 @@ body{font-family: coreE;font-weight: 400;font-size: $f20;color: $brown;
         @include b-radius($f16);
         width: $f150;height: $f34;border: $f2 solid $orange;}
       .submit_btn{
+        @include bgsize(cover);
         border: none;background: url("../images/common/i-zoom.png") no-repeat top left;width: $f34;height: $f34;}
     }
   }
