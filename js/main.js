@@ -40,6 +40,12 @@ $(document).ready(function(){
   });
 
   var reviewSwiper = new Swiper('#cnt_best-review .swiper-container', {
-
+    centeredSlides: true,
+    slidesPerView: 2,
+    loop: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+    },
   });
 });

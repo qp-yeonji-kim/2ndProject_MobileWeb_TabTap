@@ -127,9 +127,11 @@ article{margin: $f90 $f20 $f85;}
   }
   .point_review{height: $f100;font-family: coreD;text-align: center;padding-top: $f150;
     strong{display: block;font-weight: 600;font-size: $f18;}
-    p{font-size: $f16;}
+    p{font-size: $f16;margin-right: -13vw;margin-left: -13vw;}
     span{font-size: $f14;}
   }
+  // 여기 추가하기
+  .swiper-slide-prev .point_review *, .swiper-slide-next .point_review *{display: none;}
   .thumbnail{
     @include b-radius(50%);
     @include t-form(translateX(-50%));
@@ -155,6 +157,14 @@ article{margin: $f90 $f20 $f85;}
   }
   .review5 .thumbnail::before{
     background-image: url("../images/review/r5_xp_Deco01V2.jpg");
+  }
+  .swiper-container-horizontal > .swiper-scrollbar{
+    bottom: $f10;
+    height: $f6;
+  }
+  .swiper-scrollbar-drag{
+    background: $violet;
+    
   }
 }/* 왜 그라데이션 배경이 앞으로 가지 않는 것인가? //// */
 

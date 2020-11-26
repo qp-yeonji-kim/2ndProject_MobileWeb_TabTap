@@ -284,9 +284,13 @@ article {
       font-weight: 600;
       font-size: 5vw; }
     #cnt_best-review .point_review p {
-      font-size: 4.4444444444vw; }
+      font-size: 4.4444444444vw;
+      margin-right: -13vw;
+      margin-left: -13vw; }
     #cnt_best-review .point_review span {
       font-size: 3.8888888889vw; }
+  #cnt_best-review .swiper-slide-prev .point_review *, #cnt_best-review .swiper-slide-next .point_review * {
+    display: none; }
   #cnt_best-review .thumbnail {
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -332,6 +336,11 @@ article {
     background-image: url("../images/review/r4_hu_KAMVAS13.jpg"); }
   #cnt_best-review .review5 .thumbnail::before {
     background-image: url("../images/review/r5_xp_Deco01V2.jpg"); }
+  #cnt_best-review .swiper-container-horizontal > .swiper-scrollbar {
+    bottom: 2.7777777778vw;
+    height: 1.6666666667vw; }
+  #cnt_best-review .swiper-scrollbar-drag {
+    background: #735587; }
 
 /* 왜 그라데이션 배경이 앞으로 가지 않는 것인가? //// */
 #cnt_now_event {
