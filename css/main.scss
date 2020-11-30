@@ -192,10 +192,10 @@ article{margin: $f90 $f20 $f85;}
       }
     }
     .swiper-pagination{
-      position: absolute;right: $f20;bottom: -$f6;height: 7.777777777777778vw;
+      position: absolute;right: $f20;bottom: $f6;height: 7.777777777777778vw;
       .swiper-pagination-bullet{
         @include b-radius(50%);
-        width: $f10;height: $f10;margin: $f30;background: $l-violet;opacity: 1;
+        width: $f10;height: $f10;margin: $f4;background: $l-violet;opacity: 1;
       }
       .swiper-pagination-bullet-active{
         @include b-radius($f20);

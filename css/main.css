@@ -404,14 +404,14 @@ article {
     #cnt_now_event .swiper-container .swiper-pagination {
       position: absolute;
       right: 5.5555555556vw;
-      bottom: -1.6666666667vw;
+      bottom: 1.6666666667vw;
       height: 7.777777777777778vw; }
       #cnt_now_event .swiper-container .swiper-pagination .swiper-pagination-bullet {
         -webkit-border-radius: 50%;
         border-radius: 50%;
         width: 2.7777777778vw;
         height: 2.7777777778vw;
-        margin: 8.3333333333vw;
+        margin: 1.1111111111vw;
         background: #BEABCA;
         opacity: 1; }
       #cnt_now_event .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
