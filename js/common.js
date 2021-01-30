@@ -12,8 +12,7 @@ $(document).ready(function () {
       $first.focus();});
     $first.on('keydown', function(e) {
       if(e.shiftKey && e.keyCode == 9) {
-        e.preventDefault(); 
-        //e의 용도, 무엇의 기본속성: a다른 페이지로 이동하는 것을 막아준다. event객체
+        e.preventDefault();
         $last.focus();
       }
     });

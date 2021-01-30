@@ -29,6 +29,9 @@ $(document).ready(function(){
     mainSwiper.autoplay.start();
   });
 
+  
+
+
   var eventSwiper = new Swiper('#cnt_now_event .swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',

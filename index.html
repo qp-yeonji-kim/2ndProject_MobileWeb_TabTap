@@ -2,314 +2,315 @@
 <html lang="ko">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> TAB TAP_새로움을 편리함으로 </title>
-  <link rel="stylesheet" href="css/swiper-bundle.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="apple-touch-icon" href="images/common/favicon_apple.ico"><!-- 아이폰 바로가기 아이콘 -->
-  <link rel="shortcut icon" href="images/common/favicon_short.ico"><!-- 안드로이드폰 -->
-  <script src="js/jquery-1.12.4.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/main.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://qp-yeonji-kim.github.io/2ndProject_MobileWeb_TabTap/">
+	<meta property="og:title" content="TAB TAP">
+	<meta property="og:description" content="새로움을 편리함으로">
+	<meta property="og:image" content="images/common/thumb-logo.jpg">
+	<title>TAB TAP_새로움을 편리함으로</title>
+	<link rel="stylesheet" href="css/swiper-bundle.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="apple-touch-icon" href="images/common/ios-tab.png"><!-- 아이폰 아이콘 -->
+	<link rel="shortcut icon" href="images/common/favicon-tab.ico"><!-- 안드로이드 -->
+	<link rel="icon" href="images/common/favicon-tab.ico">
+	<link rel="mask-icon" href="images/common/logo-tab.svg" clolor="#765789"><!-- 사파리 브라우저 마스크 아이콘 -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
 <body>
-  <div id="wrap">
-    <header id="header">
-      <h1 class="logo"><a href="index.html"><img src="images/common/logo.png"
-            srcset="images/common/logox2.png 2x, images/common/logox3.png 3x alt=" TAB TAP 로고"></a></h1>
-      <div class="menu">
-        <div id="search_bar">
-          <input type="search" class="typing">
-          <input type="button" class="submit_btn">
-        </div>
+	<div id="wrap">
+		<header id="header">
+			<h1 class="logo"><a href="index.html"><img src="images/common/logo-tab.svg" alt="TAB TAP"></a></h1>
+			<div class="menu">
+				<div id="search_bar">
+					<label for="search" class="blind-b">검색</label>
+					<input type="search" id="search">
+					<button type="button" class="submit_btn"><img src="images/common/search.svg" alt=""></button>
+				</div>
+				<button class="menu_btn menu_btn_open" href="" role="button">
+					<span class="blind-b">메뉴 열기</span>
+					<img src="images/common/menu.svg" alt="...">
+				</button>
+			</div>
+			<nav id="nav">
+				<div class="nav_inner">
+					<p><strong>로그인</strong>이 필요합니다. <a href="" data-link="first"><img src="images/common/i-login.svg"
+								alt="로그인 하기"></a></p>
+					<ul class="private">
+						<li><a href=""><img src="images/common/i-mypage.svg" alt=""><span>나의 페이지</span></a></li>
+						<li><a href=""><img src="images/common/i-cart.svg" alt=""><span>장바구니</span></a></li>
+						<li><a href=""><img src="images/common/i-order.svg" alt=""><span>주문내역</span></a></li>
+					</ul>
+					<ul id="gnb">
+						<li>
+							<a href="">회사소개</a>
+							<ul>
+								<li><a href="">서비스 안내</a></li>
+								<li><a href="">협력사 소개</a></li>
+								<li><a href="">이용방법</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">제품목록 </a>
+							<ul>
+								<li><a href="">제품검색</a></li>
+								<li><a href="">WACOM</a></li>
+								<li><a href="">HUION</a></li>
+								<li><a href="">XP-PEN</a></li>
+								<li><a href="">장은테크</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">예약문의</a>
+							<ul>
+								<li><a href="">제품예약</a></li>
+								<li><a href="">상담신청</a></li>
+								<li><a href="">문의내역</a></li>
+							</ul>
+						</li>
+						<li class="direct-link">
+							<a href="">이용후기</a>
+						</li>
+						<li>
+							<a href="">공지사항</a>
+							<ul>
+								<li><a href="">이벤트</a></li>
+								<li><a href="">뉴스</a></li>
+								<li><a href="">안내</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="admin">
+						<strong>이용시간</strong>
+						<p>
+							평일 오전 9시 ~ 오후 7시<br>
+							토요일 오전 9시 ~ 오후 6시<br>
+							일요일, 공휴일 휴무<br>
+							점심시간 12시 ~ 1시
+						</p>
+						<strong>대표전화</strong>
+						<span>012-5453-3121</span>
+					</div>
+					<button class="menu_btn menu_btn_close" data-link="last" href="" role="button">
+						<img src="images/common/close.svg" alt="메뉴 닫기">
+					</button>
+				</div>
+			</nav>
+		</header>
+		<section id="main_section" role="main">
+			<!-- role을 넣을 때와 안넣을 때//모바일 스크린리더가 skip시켜주는 기준이 된다. -->
+			<article id="cnt_main">
+				<h2 class="blind-b">TAB TAP 소개</h2>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide intro1">
+							<img src="images/main/intro1-wbg.svg" alt="">
+							<div class="info">
+								<span aria-label="1">01</span>
+								<p>스테디셀러부터<br>
+									최신 기기까지,<br>
+									새로움을 경험해보세요.</p>
+							</div>
+						</div>
+						<div class="swiper-slide intro2">
+							<img src="images/main/intro2-wbg.svg" alt="">
+							<div class="info">
+								<span aria-label="2">02</span>
+								<p>타블렛 사용에 필요한<br>
+									다양한 보조장비와<br>
+									악세사리도 잊지 마세요.</p>
+							</div>
+						</div>
+						<div class="swiper-slide intro3">
+							<img src="images/main/intro3-wbg.svg" alt="">
+							<div class="info">
+								<span aria-label="3">03</span>
+								<p>전국 14개 지점에<br>
+									총 56종의 타블렛이<br>
+									구비되어 있습니다.</p>
+							</div>
+						</div>
+					</div>
+					<div id="controller">
+						<div class="swiper-pagination"></div>
+						<button class="autostop play_stop" title="일시정지"><img src="images/main/pause.svg" alt="일시정지"></button>
+						<button class="autoplay play_stop" title="자동실행"><img src="images/main/play.svg" alt="자동실행"></button>
+					</div>
+				</div>
+				<div id="toolbar">
+					<ul>
+						<li><a href="">이용<br>방법</a></li>
+						<li><a href="">예약<br>하기</a></li>
+					</ul>
+				</div>
+			</article>
 
-        <a class="menu_btn menu_btn_open" href="" role="button">
-          <span class="blind-b">메뉴 열기</span>
-          <span class="line top"></span>
-          <span class="line mid"></span>
-          <span class="line btm"></span>
-        </a>
-      </div>
-      <nav id="nav">
-        <div class="nav_inner">
-          <p><strong>로그인</strong>이 필요합니다. <a href="" data-link="first"><img src="images/common/i-login.svg"
-                alt="로그인 하기"></a></p>
-          <ul class="private">
-            <li><a href=""><img src="images/common/i-mypage.svg" alt=""><span>나의 페이지</span></a></li>
-            <li><a href=""><img src="images/common/i-cart.svg" alt=""><span>장바구니</span></a></li>
-            <li><a href=""><img src="images/common/i-order.svg" alt=""><span>주문내역</span></a></li>
-          </ul>
-          <ul id="gnb">
-            <li>
-              <a href="">회사소개</a>
-              <ul>
-                <li><a href="">서비스 안내</a></li>
-                <li><a href="">협력사 소개</a></li>
-                <li><a href="">이용방법</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">제품목록 </a>
-              <ul>
-                <li><a href="">제품검색</a></li>
-                <li><a href="">WACOM</a></li>
-                <li><a href="">HUION</a></li>
-                <li><a href="">XP-PEN</a></li>
-                <li><a href="">장은테크</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">예약문의</a>
-              <ul>
-                <li><a href="">제품예약</a></li>
-                <li><a href="">상담신청</a></li>
-                <li><a href="">문의내역</a></li>
-              </ul>
-            </li>
-            <li class="direct-link">
-              <a href="">이용후기</a>
-            </li>
-            <li>
-              <a href="">공지사항</a>
-              <ul>
-                <li><a href="">이벤트</a></li>
-                <li><a href="">뉴스</a></li>
-                <li><a href="">안내</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div class="admin">
-            <strong>이용시간</strong>
-            <p>
-              평일 오전 9시 ~ 오후 7시<br>
-              토요일 오전 9시 ~ 오후 6시<br>
-              일요일, 공휴일 휴무<br>
-              점심시간 12시 ~ 1시
-            </p>
-            <strong>대표전화</strong>
-            <span>012-5453-3121</span>
-          </div>
-          <a class="menu_btn menu_btn_close" data-link="last" href="" role="button">
-            <span class="blind-b">메뉴 닫기</span>
-            <span class="line top"></span>
-            <span class="line mid"></span>
-            <span class="line btm"></span>
-          </a>
-        </div>
-      </nav>
-    </header>
-    <section id="main_section" role="main">
-      <!-- role을 넣을 때와 안넣을 때//모바일 스크린리더가 skip시켜주는 기준이 된다. -->
-      <article id="cnt_main">
-        <h2 class="blind-b">TAB TAP 소개</h2>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide intro1">
-              <img src="images/main/intro1-wbg.svg" alt="">
-              <div class="info">
-                <span aria-label="1">01</span>
-                <p>스테디셀러부터<br>
-                  최신 기기까지,<br>
-                  새로움을 경험해보세요.</p>
-              </div>
-            </div>
-            <div class="swiper-slide intro2">
-              <img src="images/main/intro2-wbg.svg" alt="">
-              <div class="info">
-                <span aria-label="2">02</span>
-                <p>타블렛 사용에 필요한<br>
-                  다양한 보조장비와<br>
-                  악세사리도 잊지 마세요.</p>
-              </div>
-            </div>
-            <div class="swiper-slide intro3">
-              <img src="images/main/intro3-wbg.svg" alt="">
-              <div class="info">
-                <span aria-label="3">03</span>
-                <p>전국 14개 지점에<br>
-                  총 56종의 타블렛이<br>
-                  구비되어 있습니다.</p>
-              </div>
-            </div>
-          </div>
-          <div id="controller">
-            <div class="swiper-pagination"></div>
-            <button class="autostop play_stop" title="일시정지"><img src="images/main/i-pause.png" alt="일시정지"></button>
-            <button class="autoplay play_stop" title="자동실행"><img src="images/main/i-play.png" alt="자동실행"></button>
-          </div>
-        </div>
-        <div id="toolbar">
-          <ul>
-            <li><a href="">이용<br>방법</a></li>
-            <li><a href="">예약<br>하기</a></li>
-          </ul>
-        </div>
-      </article>
+			<article id="cnt_company">
+				<h2 class="blind-b">회사별 타블렛</h2>
+				<p><span class="quotation">&ldquo;</span><span class="talk">자신에게 맞는</span><br><span class="talk">장비를
+						찾아보세요.</span><span class="quotation">&rdquo;</span></p>
+				<ul>
+					<li><a href="">WACOM</a></li>
+					<li><a href="">HUION</a></li>
+					<li><a href="">XP-PEN</a></li>
+					<li><a href="">장은테크</a></li>
+				</ul>
+			</article>
+		</section>
 
-      <article id="cnt_company">
-        <h2 class="blind-b">회사별 타블렛</h2>
-        <p><span class="quotation">&ldquo;</span><span class="talk">자신에게 맞는</span><br><span class="talk">장비를
-            찾아보세요.</span><span class="quotation">&rdquo;</span></p>
-        <ul>
-          <li><a href="">WACOM</a></li>
-          <li><a href="">HUION</a></li>
-          <li><a href="">XP-PEN</a></li>
-          <li><a href="">장은테크</a></li>
-        </ul>
-      </article>
-    </section>
+		<article id="cnt_best-review">
+			<h2>REVIEW</h2>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide review1">
+						<div class="point_review">
+							<strong>Intuos pro 중형</strong>
+							<p>집에서 편안하게 설정해 둔 그대로<br>
+								그대로 타블렛을 체험할 수 있어서 좋았어요.</p>
+							<span>장**</span>
+						</div>
+						<a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
+					</div>
+					<div class="swiper-slide review2">
+						<div class="point_review">
+							<strong>Artist 22E Pro</strong>
+							<p>대여기간 내내 큰 발열을 느끼지 못했습니다.<br>
+								단축키 설정이 매우 편하게 느껴진 제품입니다.</p>
+							<span>최**</span>
+						</div>
+						<a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
+					</div>
+					<div class="swiper-slide review3">
+						<div class="point_review">
+							<strong>Wacom One</strong>
+							<p>제품이 가벼워서 매우 좋았습니다.<br>
+								보급형 액정 타블렛으로는 딱이에요!</p>
+							<span>조**</span>
+						</div>
+						<a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
+					</div>
+					<div class="swiper-slide review4">
+						<div class="point_review">
+							<strong>KAMVAS13</strong>
+							<p>배젤이 넓다는 것빼고는 다 좋았습니다.<br>
+								입문자용 액정타블렛으론 이게 최고인 것 같아요.</p>
+							<span>정**</span>
+						</div>
+						<a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
+					</div>
+					<div class="swiper-slide review5">
+						<div class="point_review">
+							<strong>Deco 01V2</strong>
+							<p>얇고 가벼워서 휴대용으로 좋았습니다.<br>
+								구매를 망설였는데 덕분에 맞는 타블렛을 찾았습니다.</p>
+							<span>김**</span>
+						</div>
+						<a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
+					</div>
+				</div>
+				<div class="swiper-scrollbar"></div>
+			</div>
+		</article>
 
-    <article id="cnt_best-review">
-      <h2>REVIEW</h2>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide review1">
-            <div class="point_review">
-              <strong>Intuos pro 중형</strong>
-              <p>집에서 편안하게 설정해 둔 그대로<br>
-                그대로 타블렛을 체험할 수 있어서 좋았어요.</p>
-              <span>장**</span>
-            </div>
-            <a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
-          </div>
-          <div class="swiper-slide review2">
-            <div class="point_review">
-              <strong>Artist 22E Pro</strong>
-              <p>대여기간 내내 큰 발열을 느끼지 못했습니다.<br>
-                단축키 설정이 매우 편하게 느껴진 제품입니다.</p>
-              <span>최**</span>
-            </div>
-            <a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
-          </div>
-          <div class="swiper-slide review3">
-            <div class="point_review">
-              <strong>Wacom One</strong>
-              <p>제품이 가벼워서 매우 좋았습니다.<br>
-                보급형 액정 타블렛으로는 딱이에요!</p>
-              <span>조**</span>
-            </div>
-            <a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
-          </div>
-          <div class="swiper-slide review4">
-            <div class="point_review">
-              <strong>KAMVAS13</strong>
-              <p>배젤이 넓다는 것빼고는 다 좋았습니다.<br>
-                입문자용 액정타블렛으론 이게 최고인 것 같아요.</p>
-              <span>정**</span>
-            </div>
-            <a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
-          </div>
-          <div class="swiper-slide review5">
-            <div class="point_review">
-              <strong>Deco 01V2</strong>
-              <p>얇고 가벼워서 휴대용으로 좋았습니다.<br>
-                구매를 망설였는데 덕분에 맞는 타블렛을 찾았습니다.</p>
-              <span>김**</span>
-            </div>
-            <a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
-          </div>
-        </div>
-        <div class="swiper-scrollbar"></div>
-      </div>
-    </article>
+		<article id="cnt_now_event">
+			<h2>EVENT</h2>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide event1">
+						<a href="">
+							<p>우수 체험 후기 모집<br>
+								<span>30% 할인 쿠폰 제공</span>
+							</p>
+						</a>
+					</div>
+					<div class="swiper-slide event2">
+						<a href="">
+							<p>인스타그램/ 페이스북<br>
+								구독자 댓글 이벤트</p>
+						</a>
+					</div>
+					<div class="swiper-slide event3">
+						<a href="">
+							<p><span>신규가입 이벤트</span><br>
+								새롭게 가입한 회원 선착순 100명께<br>
+								배송비 무료 쿠폰 제공</p>
+						</a>
+					</div>
+				</div>
+				<div id="event_controller">
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</article>
 
-    <article id="cnt_now_event">
-      <h2>EVENT</h2>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide event1">
-            <a href="">
-              <p>우수 체험 후기 모집<br>
-                <span>30% 할인 쿠폰 제공</span>
-              </p>
-            </a>
-          </div>
-          <div class="swiper-slide event2">
-            <a href="">
-              <p>인스타그램/ 페이스북<br>
-                구독자 댓글 이벤트</p>
-            </a>
-          </div>
-          <div class="swiper-slide event3">
-            <a href="">
-              <p><span>신규가입 이벤트</span><br>
-                새롭게 가입한 회원 선착순 100명께<br>
-                배송비 무료 쿠폰 제공</p>
-            </a>
-          </div>
-        </div>
-        <div id="event_controller">
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-    </article>
-
-    <article id="cnt_social">
-      <h2>SOCIAL</h2>
-      <p>TAB TAP의 다양한 소식을 접해보세요.</p>
-      <ul>
-        <li>
-          <a href="">
-            <img src="images/main/btn_sns1.png" alt="TAB TAP 네이버 블로그 바로가기"
-              srcset="images/main/btn_sns1x2.png 2x, images/main/btn_sns1x3.png 3x">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="images/main/btn_sns2.png" alt="TAB TAP 인스타그램 바로가기"
-              srcset="images/main/btn_sns2x2.png 2x, images/main/btn_sns2x3.png 3x">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="images/main/btn_sns3.png" alt="TAB TAP 페이스북 바로가기"
-              srcset="images/main/btn_sns3x2.png 2x, images/main/btn_sns3x3.png 3x">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="images/main/btn_sns4.png" alt="TAB TAP 유튜브 바로가기"
-              srcset="images/main/btn_sns4x2.png 2x, images/main/btn_sns4x3.png 3x">
-            <!-- 디바이스의 크기에 따라 자동으로 밀도가 달라진다. 
+		<article id="cnt_social">
+			<h2>SOCIAL</h2>
+			<p>TAB TAP의 다양한 소식을 접해보세요.</p>
+			<ul>
+				<li>
+					<a href="">
+						<img src="images/main/btn_sns1.png" alt="TAB TAP 네이버 블로그 바로가기"
+							srcset="images/main/btn_sns1x2.png 2x, images/main/btn_sns1x3.png 3x">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/main/btn_sns2.png" alt="TAB TAP 인스타그램 바로가기"
+							srcset="images/main/btn_sns2x2.png 2x, images/main/btn_sns2x3.png 3x">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/main/btn_sns3.png" alt="TAB TAP 페이스북 바로가기"
+							srcset="images/main/btn_sns3x2.png 2x, images/main/btn_sns3x3.png 3x">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/main/btn_sns4.png" alt="TAB TAP 유튜브 바로가기"
+							srcset="images/main/btn_sns4x2.png 2x, images/main/btn_sns4x3.png 3x">
+						<!-- 디바이스의 크기에 따라 자동으로 밀도가 달라진다. 
   크기 또한 조절하려면 size, vw, %등으로 조절한다. -->
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="images/main/btn_sns5.png" alt="TAB TAP 카카오톡 친구 맺기"
-              srcset="images/main/btn_sns5x2.png 2x, images/main/btn_sns5x3.png 3x">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="images/main/btn_sns6.png" alt="공지사항 바로가기"
-              srcset="images/main/btn_sns6x2.png 2x, images/main/btn_sns6x3.png 3x">
-          </a>
-        </li>
-      </ul>
-    </article>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/main/btn_sns5.png" alt="TAB TAP 카카오톡 친구 맺기"
+							srcset="images/main/btn_sns5x2.png 2x, images/main/btn_sns5x3.png 3x">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="images/main/btn_sns6.png" alt="공지사항 바로가기"
+							srcset="images/main/btn_sns6x2.png 2x, images/main/btn_sns6x3.png 3x">
+					</a>
+				</li>
+			</ul>
+		</article>
 
-    <footer id="footer">
-      <span>(주)TAB TAP</span>
-      <ul>
-        <li><a href="">개인정보방침</a></li>
-        <li><a href="">이용약관</a></li>
-        <li><a href=""> 이메일무단수집거부</a></li>
-        <li><a href=""> 아이디어정책</a></li>
-      </ul>
-      <address id="address">
-        서울시 강남구 강남대로 22길 008<br>
-        대표전화 012-5453-3121
-        <span>Copyright @TAB TAP All Rights Reserved</span>
-      </address>
-    </footer>
-  </div>
+		<footer id="footer">
+			<span>(주)TAB TAP</span>
+			<ul>
+				<li><a href="">개인정보방침</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href=""> 이메일무단수집거부</a></li>
+				<li><a href=""> 아이디어정책</a></li>
+			</ul>
+			<address id="address">
+				서울시 강남구 강남대로 22길 008<br>
+				대표전화 012-5453-3121
+				<span>Copyright @TAB TAP All Rights Reserved</span>
+			</address>
+		</footer>
+	</div>
 </body>
 
 </html>
