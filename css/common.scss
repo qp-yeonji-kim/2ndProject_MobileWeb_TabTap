@@ -301,15 +301,15 @@ body {
 
   .nav_inner {
     position: relative;
-    padding: 7px 0 20px 0;
+    padding: 6px 0 20px;
     background: #fff;
 
     >p,
     >span {
       display: inline-block;
-      padding-bottom: $f21;
       font-size: $f16;
       font-weight: 300;
+      padding-top: 2px;
       padding-left: $f20;
       line-height: $f42;
 
@@ -318,51 +318,65 @@ body {
       }
 
       img {
-        width: $f34;
-        margin-left: $f8;
+        width: 36px;
+        margin-top: -3px;
+        margin-left: 10px;
       }
     }
 
     .private {
-      width: $f265;
+      width: 100%;
       height: $f82;
-      margin: 0 auto $f25;
+      margin: 20px;
 
       li {
-        @include b-radius($f10);
+        @include b-radius(10px);
         float: left;
         width: $f70;
         height: $f70;
         padding-bottom: $f8;
         font-family: coreD;
-        font-weight: 500;
         font-size: $f12;
-        color: $violet;
+        font-weight: 500;
         text-align: center;
-        border: $f2 solid $l-violet;
+        color: $violet;
+        border: 2px solid $l-violet;
 
         &+li {
-          margin-left: $f6;
+          margin-left: $f12;
         }
 
-        img {
-          width: $f40;
-          padding-top: $f10;
+        div{
+          @include bgsize(contain);
+          width: $f42;
+          height: $f42;
+          margin: $f8 auto 0;
+          background: no-repeat center;
         }
+  
+        &:nth-of-type(1) div{
+          background-image: url("../images/common/i-mypage.svg");
+        }
+        &:nth-of-type(2) div{
+          background-image: url("../images/common/i-cart.svg");
+        }
+        &:nth-of-type(3) div{
+          background-image: url("../images/common/i-order.svg");
+        }
+      }
 
-        span {
-          display: block;
-          padding-top: $f6;
-        }
+      span {
+        display: block;
+        padding-top: $f6;
+      }
 
-        a {
-          display: block;
-        }
+      a {
+        display: block;
       }
     }
 
     #gnb {
-      @include b-radius($f30 0 0 0);
+      @include b-radius(16px 0 0 0);
       content: "";
       display: block;
       clear: both;
@@ -387,7 +401,6 @@ body {
         font-weight: 500;
       }
 
-      //가상요소
       >li:not(.direct-link)>a::after {
         @include t-sition(all, 0.5s);
         content: "";
