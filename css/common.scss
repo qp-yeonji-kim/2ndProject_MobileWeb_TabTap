@@ -201,14 +201,14 @@ body {
 }
 
 #wrap {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 
 #header {
   @include b-box;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   padding: 0 20px;
   background: rgba(255, 255, 255, 0.8);
@@ -266,26 +266,26 @@ body {
       }
     }
   }
+}
 
-  .menu_btn {
-    float: right;
-    position: relative;
-    top: 12px;
+.menu_btn {
+  float: right;
+  position: relative;
+  top: 12px;
+  width: 34px;
+  height: 34px;
+
+  &.menu_btn_open {
+    left: 18px;
+  }
+
+  &.menu_btn_close {
+    position: absolute;
+    right: 20px;
+  }
+
+  img {
     width: 34px;
-    height: 34px;
-
-    &.menu_btn_open {
-      left: 18px;
-    }
-
-    &.menu_btn_close {
-      position: absolute;
-      right: 20px;
-    }
-
-    img {
-      width: 34px;
-    }
   }
 }
 
@@ -293,7 +293,6 @@ body {
   display: none;
   position: fixed;
   left: 100%;
-  right: 0;
   top: 0;
   bottom: 0;
   width: 80%;
@@ -302,7 +301,7 @@ body {
 
   .nav_inner {
     position: relative;
-    padding: $f7 0 $f20 0;
+    padding: 7px 0 20px 0;
     background: #fff;
 
     >p,
@@ -458,7 +457,7 @@ body {
 #footer {
   @include bg-g(150deg, $l-orange, $l-violet);
   @include b-radius($f20 $f20 0 0);
-  width: 100vw;
+  width: 100%;
   height: $f300;
   padding: $f26 $f52;
   font-family: coreD;

@@ -135,14 +135,14 @@ body {
     font-weight: 500; }
 
 #wrap {
-  width: 100vw;
+  width: 100%;
   overflow: hidden; }
 
 #header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   padding: 0 20px;
   background: rgba(255, 255, 255, 0.8);
@@ -185,25 +185,25 @@ body {
         height: 36px; }
         #header .menu #search_bar .submit_btn img {
           width: 36px; }
-  #header .menu_btn {
-    float: right;
-    position: relative;
-    top: 12px;
-    width: 34px;
-    height: 34px; }
-    #header .menu_btn.menu_btn_open {
-      left: 18px; }
-    #header .menu_btn.menu_btn_close {
-      position: absolute;
-      right: 20px; }
-    #header .menu_btn img {
-      width: 34px; }
+
+.menu_btn {
+  float: right;
+  position: relative;
+  top: 12px;
+  width: 34px;
+  height: 34px; }
+  .menu_btn.menu_btn_open {
+    left: 18px; }
+  .menu_btn.menu_btn_close {
+    position: absolute;
+    right: 20px; }
+  .menu_btn img {
+    width: 34px; }
 
 #nav {
   display: none;
   position: fixed;
   left: 100%;
-  right: 0;
   top: 0;
   bottom: 0;
   width: 80%;
@@ -211,7 +211,7 @@ body {
   z-index: 1000; }
   #nav .nav_inner {
     position: relative;
-    padding: 1.9444444444vw 0 5.5555555556vw 0;
+    padding: 7px 0 20px 0;
     background: #fff; }
     #nav .nav_inner > p,
     #nav .nav_inner > span {
@@ -331,7 +331,7 @@ body {
   background: linear-gradient(150deg, #FFEDE7, #BEABCA);
   -webkit-border-radius: 5.5555555556vw 5.5555555556vw 0 0;
   border-radius: 5.5555555556vw 5.5555555556vw 0 0;
-  width: 100vw;
+  width: 100%;
   height: 83.3333333333vw;
   padding: 7.2222222222vw 14.4444444444vw;
   font-family: coreD;

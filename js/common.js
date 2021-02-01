@@ -2,8 +2,8 @@ $(document).ready(function () {
   /* #nav 좌표 조정하기 */
   var $nav = $('#nav');
   var $gnb = $('#gnb');
-  var $menuBtn = $('#header .menu_btn');
-  
+  var $menuBtn = $('.menu_btn');
+
   $('#header .menu_btn_open').on('click', function () {
     $menuBtn.addClass('act_left');
     var $first = $nav.find('[data-link="first"]');
@@ -24,7 +24,7 @@ $(document).ready(function () {
       }
     });
 
-    $('#header .menu_btn_close').on('click', function(){
+    $('#nav .menu_btn_close').on('click', function(){
       $nav.stop().animate({left: '100%'}, 300, function(){
         $(this).css({display: 'none'}).find('#gnb > li.on').removeClass('on').children('ul').stop().slideUp();
         $('#header .menu_btn_open').focus();
