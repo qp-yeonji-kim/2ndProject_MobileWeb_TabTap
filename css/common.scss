@@ -288,182 +288,172 @@ body {
     }
   }
 
-  #nav {
-    display: none;
-    position: fixed;
-    left: 100%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 80%;
-    overflow-y: auto;
+}
+#nav {
+  display: none;
+  position: fixed;
+  left: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  overflow-y: auto;
+  z-index: 1000;
 
-    &::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, .7);
+  .nav_inner {
+    position: relative;
+    padding: $f7 0 $f20 0;
+    background: #fff;
+
+    >p,
+    >span {
+      display: inline-block;
+      padding-bottom: $f21;
+      font-size: $f16;
+      font-weight: 300;
+      padding-left: $f20;
+      line-height: $f42;
+
+      strong {
+        font-weight: 500;
+      }
+
+      img {
+        width: $f34;
+        margin-left: $f8;
+      }
     }
 
-    .nav_inner {
-      position: relative;
-      padding: $f7 0 $f20 0;
-      background: #fff;
+    .private {
+      width: $f265;
+      height: $f82;
+      margin: 0 auto $f25;
 
-      >p,
-      >span {
-        display: inline-block;
-        padding-bottom: $f21;
-        font-size: $f16;
-        font-weight: 300;
-        padding-left: $f20;
-        line-height: $f42;
+      li {
+        @include b-radius($f10);
+        float: left;
+        width: $f70;
+        height: $f70;
+        padding-bottom: $f8;
+        font-family: coreD;
+        font-weight: 500;
+        font-size: $f12;
+        color: $violet;
+        text-align: center;
+        border: $f2 solid $l-violet;
 
-        strong {
-          font-weight: 500;
+        &+li {
+          margin-left: $f6;
         }
 
         img {
-          width: $f34;
-          margin-left: $f8;
+          width: $f40;
+          padding-top: $f10;
         }
-      }
 
-      .private {
-        width: $f265;
-        height: $f82;
-        margin: 0 auto $f25;
-
-        li {
-          @include b-radius($f10);
-          float: left;
-          width: $f70;
-          height: $f70;
-          padding-bottom: $f8;
-          font-family: coreD;
-          font-weight: 500;
-          font-size: $f12;
-          color: $violet;
-          text-align: center;
-          border: $f2 solid $l-violet;
-
-          &+li {
-            margin-left: $f6;
-          }
-
-          img {
-            width: $f40;
-            padding-top: $f10;
-          }
-
-          span {
-            display: block;
-            padding-top: $f6;
-          }
-
-          a {
-            display: block;
-          }
+        span {
+          display: block;
+          padding-top: $f6;
         }
-      }
-
-      #gnb {
-        @include b-radius($f30 0 0 0);
-        content: "";
-        display: block;
-        clear: both;
-        padding: $f24 0;
-        color: #fff;
-        background: linear-gradient(135deg, #826b90, #916a5b);
 
         a {
-          display: inline-block;
-          line-height: $f34;
-        }
-
-        >li {
-          margin-bottom: $f16;
-        }
-
-        >li>a {
-          position: relative;
-          padding: $f10 0;
-          text-indent: $f40;
-          font-family: coreD;
-          font-weight: 500;
-        }
-
-        //가상요소
-        >li:not(.direct-link)>a::after {
-          @include t-sition(all, 0.5s);
-          content: "";
-          position: absolute;
-          right: -$f60;
-          top: calc(50% - 3px);
-          border-top: $f7 solid rgba(255, 255, 255, 0.8);
-          border-left: $f5 solid transparent;
-          border-right: $f5 solid transparent;
-        }
-
-        >li.on:not(.direct-link)>a::after {
-          @include t-form(rotate(180deg));
-        }
-
-        li ul {
-          margin-bottom: $f30;
-        }
-
-        li.on ul {
           display: block;
-        }
-
-        li ul li a {
-          padding: $f10 $f58;
-          width: 100%;
-          font-family: coreE;
-          font-weight: 300;
-          font-size: $f16;
-        }
-
-        >li>a:focus,
-        >li>a:hover,
-        >li.on>a {
-          text-decoration: underline;
-        }
-
-        li ul li a:focus,
-        li ul li a:hover {
-          @include bg-g(90deg, rgba(255, 210, 194, 0.2), transparent);
         }
       }
+    }
 
-      .admin {
-        strong {
-          display: block;
-          width: $f80;
-          margin: $f30 0 $f10 $f50;
-          font-weight: 400;
-          font-size: $f16;
-        }
+    #gnb {
+      @include b-radius($f30 0 0 0);
+      content: "";
+      display: block;
+      clear: both;
+      padding: $f24 0;
+      color: #fff;
+      background: linear-gradient(135deg, #826b90, #916a5b);
 
-        strong+p,
-        >strong+span {
-          display: inline-block;
-          margin-left: $f30;
-          font-size: $f14;
-        }
+      a {
+        display: inline-block;
+        line-height: $f34;
+      }
 
-        strong+p {
-          line-height: $f24;
-        }
+      >li {
+        margin-bottom: $f16;
+      }
+
+      >li>a {
+        position: relative;
+        padding: $f10 0;
+        text-indent: $f40;
+        font-family: coreD;
+        font-weight: 500;
+      }
+
+      //가상요소
+      >li:not(.direct-link)>a::after {
+        @include t-sition(all, 0.5s);
+        content: "";
+        position: absolute;
+        right: -$f60;
+        top: calc(50% - 3px);
+        border-top: $f7 solid rgba(255, 255, 255, 0.8);
+        border-left: $f5 solid transparent;
+        border-right: $f5 solid transparent;
+      }
+
+      >li.on:not(.direct-link)>a::after {
+        @include t-form(rotate(180deg));
+      }
+
+      li ul {
+        margin-bottom: $f30;
+      }
+
+      li.on ul {
+        display: block;
+      }
+
+      li ul li a {
+        padding: $f10 $f58;
+        width: 100%;
+        font-family: coreE;
+        font-weight: 300;
+        font-size: $f16;
+      }
+
+      >li>a:focus,
+      >li>a:hover,
+      >li.on>a {
+        text-decoration: underline;
+      }
+
+      li ul li a:focus,
+      li ul li a:hover {
+        @include bg-g(90deg, rgba(255, 210, 194, 0.2), transparent);
+      }
+    }
+
+    .admin {
+      strong {
+        display: block;
+        width: $f80;
+        margin: $f30 0 $f10 $f50;
+        font-weight: 400;
+        font-size: $f16;
+      }
+
+      strong+p,
+      >strong+span {
+        display: inline-block;
+        margin-left: $f30;
+        font-size: $f14;
+      }
+
+      strong+p {
+        line-height: $f24;
       }
     }
   }
 }
-
 
 #footer {
   @include bg-g(150deg, $l-orange, $l-violet);
@@ -483,3 +473,86 @@ screen and (min-resolution: 192dpi) {}
 @media screen and (-webkit-min-device-pixel-ratio: 3),
 screen and (min-resolution: 3dppx),
 screen and (min-resolution: 288dpi) {}
+
+.blur-in{
+  -webkit-animation: blur 2s forwards;
+  -moz-animation: blur 2s forwards;
+  -o-animation: blur 2s forwards;
+  animation: blur 2s forwards;
+}
+
+.blur-out{
+  -webkit-animation: blur 2s reverse;
+  -moz-animation: blur 2s reverse;
+  -o-animation: blur 2s reverse;
+  animation: blur 2s reverse;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@-webkit-keyframes blur{
+  from{
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
+  }
+  to{
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+  }
+}
+
+@-moz-keyframes blur{
+  from{
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
+  }
+  to{
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+  }
+}
+
+@-o-keyframes blur{
+  from{
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
+  }
+  to{
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+  }
+}
+
+@keyframes blur{
+  from{
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
+  }
+  to{
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+  }
+}

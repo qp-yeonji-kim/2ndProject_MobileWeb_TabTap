@@ -3,6 +3,7 @@ $(document).ready(function () {
   var $nav = $('#nav');
   var $gnb = $('#gnb');
   var $menuBtn = $('#header .menu_btn');
+  
   $('#header .menu_btn_open').on('click', function () {
     $menuBtn.addClass('act_left');
     var $first = $nav.find('[data-link="first"]');
