@@ -3,21 +3,9 @@
   box-sizing: border-box;
 }
 
-@mixin b-radius($value...){
-  -webkit-border-radius: $value; 
-  border-radius: $value; 
-}
-
 @mixin t-form($value...){
   -webkit-transform: $value;
   transform: $value;
-}
-
-@mixin t-sition($value...) {
-  -webkit-transition: $value;
-  -moz-transition: $value;
-  -o-transition: $value;
-  transition: $value;
 }
 
 @mixin bg-g($deg, $col1, $col2){
@@ -30,4 +18,16 @@
 @mixin bgsize($value...){
   -webkit-background-size: $value !important;
   background-size: $value !important;
+}
+
+@mixin b-radius($value...){
+  -webkit-border-radius: $value; 
+  border-radius: $value; 
+}
+
+@mixin t-sition($value...) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
 }

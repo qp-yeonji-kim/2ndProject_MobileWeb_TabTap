@@ -101,6 +101,28 @@
     url("../font/HeadlineR-HM.otf") format("opentype");
 }
 
+@font-face {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/Roboto-Regular.eot");
+  src: url("../font/Roboto-Regular.eot#iefix") format("embedded-opentype"),
+    url("../font/Roboto-Regular.woff") format("woff"),
+    url("../font/Roboto-Regular.woff2") format("woff2"),
+    url("../font/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/Roboto-Bold.eot");
+  src: url("../font/Roboto-Bold.eot#iefix") format("embedded-opentype"),
+    url("../font/Roboto-Bold.woff") format("woff"),
+    url("../font/Roboto-Bold.woff2") format("woff2"),
+    url("../font/Roboto-Bold.ttf") format("truetype");
+}
+
 body,
 h1,
 h2,
@@ -206,6 +228,7 @@ body {
 }
 
 #header {
+  @include t-sition(.5s all);
   @include b-box;
   position: fixed;
   width: 100%;
@@ -214,6 +237,11 @@ body {
   background: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid #fff;
   z-index: 1000;
+
+  &.white{
+    background: #fff;
+    border-color: $grey;
+  }
 
   .logo {
     @include t-form(translateY(-50%));
@@ -468,6 +496,7 @@ body {
 }
 
 #footer {
+  @include b-box;
   @include bg-g(150deg, $l-orange, $l-violet);
   @include b-radius($f20 $f20 0 0);
   width: 100%;
@@ -475,7 +504,6 @@ body {
   padding: $f26 $f52;
   font-family: coreD;
   font-size: $f12;
-  box-sizing: border-box;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -487,18 +515,17 @@ screen and (min-resolution: 3dppx),
 screen and (min-resolution: 288dpi) {}
 
 .blur-in {
-  -webkit-animation: blur 2s forwards;
-  -moz-animation: blur 2s forwards;
-  -o-animation: blur 2s forwards;
-  animation: blur 2s forwards;
+  -webkit-animation: blur .8s forwards;
+  -moz-animation: blur .8s forwards;
+  -o-animation: blur .8s forwards;
+  animation: blur .8s forwards;
 }
 
 .blur-out {
-  -webkit-animation: blur 2s reverse;
-  -moz-animation: blur 2s reverse;
-  -o-animation: blur 2s reverse;
-  animation: blur 2s reverse;
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  -webkit-animation: blur .8s reverse;
+  -moz-animation: blur .8s reverse;
+  -o-animation: blur .8s reverse;
+  animation: blur .8s reverse;
 }
 
 @-webkit-keyframes blur {
@@ -511,11 +538,11 @@ screen and (min-resolution: 288dpi) {}
   }
 
   to {
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
   }
 }
 
@@ -529,11 +556,11 @@ screen and (min-resolution: 288dpi) {}
   }
 
   to {
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
   }
 }
 
@@ -547,11 +574,11 @@ screen and (min-resolution: 288dpi) {}
   }
 
   to {
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
   }
 }
 
@@ -565,10 +592,10 @@ screen and (min-resolution: 288dpi) {}
   }
 
   to {
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
   }
 }

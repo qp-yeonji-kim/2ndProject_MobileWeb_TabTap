@@ -246,88 +246,101 @@ article {
 }
 
 #cnt_company {
-  @include bg-g(0deg, $l-orange, #fff);
-  height: $f300;
+  padding: $f90 0 $f85;
   margin: 0;
-  padding: $f90 $f20 $f85;
+
+  h2{
+    margin-left: 10px;
+    font-family: roboto;
+    font-size: 22px;
+    letter-spacing: 1.5;
+  }
 
   p {
-    position: relative;
-    z-index: 10;
-
-    .talk:nth-child(4) {
-      margin-left: $f24;
-    }
-
-    .quotation {
-      position: relative;
-      display: inline-block;
-      font-family: HDline;
-      font-size: 10vw;
-      font-weight: 500;
-      line-height: 1;
-      margin-bottom: $f8;
-
-      &::before {
-        @include bg-g(90deg, $orange, $l-violet);
-        content: "";
-        position: absolute;
-        width: 60vw;
-        height: $f40;
-        z-index: -1;
-        opacity: 0.8;
-      }
-
-      &:nth-child(5)::before {
-        left: $f16;
-        margin-left: -52vw;
-        width: 68vw;
-      }
-    }
+    margin-left: 10px;
+    font-size: 12px;
   }
 
   ul {
     display: block;
     clear: both;
+    width: 100%;
     margin: $f30 auto 0;
-    width: 87.77777777777778vw;
 
     li {
-      float: left;
-      margin: $f2;
+      @include bgsize(cover);
+      position: relative;
+      width: 100%;
+      height: $f120;
+      background: no-repeat center;
 
       a {
-        @include b-radius($f16);
-        @include bgsize(cover);
         display: inline-block;
-        width: $f135;
-        height: $f90;
-        background: no-repeat center;
-        border: $f2 solid $l-violet;
-        font-family: coreD;
-        font-size: $f20;
-        line-height: $f90;
-        text-align: center;
-        font-weight: 900;
+        margin: 36px $f30;
+        font-family: roboto;
+        font-size: 26px;
+        font-weight: 700;
         color: #000;
         text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+
+        span{
+          display: block;
+          font-size: 8px;
+          text-decoration: underline;
+        }
       }
 
-      &:nth-child(1) a {
-        background-image: url("../images/main/menu_btn_w.jpg");
-        margin-left: $f16;
+      &:nth-child(odd){
+        text-align: right;
       }
 
-      &:nth-child(2) a {
-        background-image: url("../images/main/menu_btn_h.jpg");
+      &::after{
+        @include t-sition(1s width);
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: $f120;
       }
 
-      &:nth-child(3) a {
-        background-image: url("../images/main/menu_btn_x.jpg");
+      &:nth-child(odd)::after{
+        left: 0;
       }
 
-      &:nth-child(4) a {
-        background-image: url("../images/main/menu_btn_j.jpg");
+      &:nth-child(even)::after{
+        right: 0;
+      }
+
+      &.on::after{
+        width: 0;
+      }
+      
+      &:nth-child(1) {
+        &::after{
+          background-color: #DACAE4;
+        }
+        background-image: url("../images/main/w-btn.png");
+      }
+
+      &:nth-child(2) {
+        &::after{
+          background-color: #A885BD;
+        }
+        background-image: url("../images/main/h-btn.png");
+      }
+
+      &:nth-child(3) {
+        &::after{
+          background-color: #E8E6EB;
+        }
+        background-image: url("../images/main/x-btn.png");
+      }
+
+      &:nth-child(4) {
+        &::after{
+          background-color: #735587;
+        }
+        background-image: url("../images/main/j-btn.png");
       }
     }
   }
@@ -458,8 +471,6 @@ article {
 
   }
 }
-
-/* 왜 그라데이션 배경이 앞으로 가지 않는 것인가? //// */
 
 #cnt_now_event {
   margin-left: 0;
@@ -702,8 +713,6 @@ article {
           height: $f100;
           z-index: 10;
         }
-
-        /* 왜 그라데이션 배경이 앞으로 가지 않는 것인가? //// */
       }
     }
   }

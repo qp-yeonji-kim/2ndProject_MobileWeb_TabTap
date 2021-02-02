@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  /* #nav 좌표 조정하기 */
+  /* #nav 좌표 조정 */
   var $nav = $('#nav');
   var $gnb = $('#gnb');
   var $menuBtn = $('.menu_btn');
@@ -10,7 +10,10 @@ $(document).ready(function () {
     var $last = $nav.find('[data-link="last"]');
 
     $nav.css({display: 'block'}).stop().animate({left: '20%'}, 300, function(){
-      $first.focus();});
+      $first.focus();
+      $nav.siblings().removeClass('blur-out').addClass('blur-in');
+    });
+
     $first.on('keydown', function(e) {
       if(e.shiftKey && e.keyCode == 9) {
         e.preventDefault();
@@ -28,6 +31,7 @@ $(document).ready(function () {
       $nav.stop().animate({left: '100%'}, 300, function(){
         $(this).css({display: 'none'}).find('#gnb > li.on').removeClass('on').children('ul').stop().slideUp();
         $('#header .menu_btn_open').focus();
+        $nav.siblings().removeClass('blur-in').addClass('blur-out');
       });
       $menuBtn.removeClass('act_left');
       return false;

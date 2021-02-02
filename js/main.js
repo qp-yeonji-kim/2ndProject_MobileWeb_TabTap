@@ -28,10 +28,7 @@ $(document).ready(function(){
     $(this).hide().siblings('button').show();
     mainSwiper.autoplay.start();
   });
-
   
-
-
   var eventSwiper = new Swiper('#cnt_now_event .swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
@@ -50,5 +47,22 @@ $(document).ready(function(){
       el: '.swiper-scrollbar',
       hide: false,
     },
+  });
+
+  $(window).on('scroll', function () {
+    var scrollT = $(this).scrollTop();
+    var timer = 0;
+
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+      if (scrollT > $('#cnt_company').offset().top - 500) {
+        $('#header').addClass('white');
+        $('#cnt_company li').addClass('on');
+      }
+      else{
+        $('#header').removeClass('white');
+        $('#cnt_company li').removeClass('on');
+      }
+    }, 1000);
   });
 });
