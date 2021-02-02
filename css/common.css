@@ -140,11 +140,7 @@ address {
 body {
   font-family: coreE;
   font-size: 5.5555555556vw;
-  font-weight: 400;
-  color: #544542; }
-  body h2 {
-    margin: 0 auto 2.7777777778vw;
-    font-weight: 500; }
+  font-weight: 400; }
 
 #wrap {
   width: 100%;
@@ -293,7 +289,7 @@ body {
       clear: both;
       padding: 6.6666666667vw 0;
       color: #fff;
-      background: linear-gradient(135deg, #826b90, #916a5b); }
+      background: #7d6790; }
       #nav .nav_inner #gnb a {
         display: inline-block;
         line-height: 9.4444444444vw; }
@@ -353,21 +349,6 @@ body {
       font-size: 3.8888888889vw; }
     #nav .nav_inner .admin strong + p {
       line-height: 6.6666666667vw; }
-
-#footer {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background: #FFEDE7;
-  background: -webkit-linear-gradient(150deg, #FFEDE7, #BEABCA);
-  background: -o-linear-gradient(150deg, #FFEDE7, #BEABCA);
-  background: linear-gradient(150deg, #FFEDE7, #BEABCA);
-  -webkit-border-radius: 5.5555555556vw 5.5555555556vw 0 0;
-  border-radius: 5.5555555556vw 5.5555555556vw 0 0;
-  width: 100%;
-  height: 83.3333333333vw;
-  padding: 7.2222222222vw 14.4444444444vw;
-  font-family: coreD;
-  font-size: 3.3333333333vw; }
 
 .blur-in {
   -webkit-animation: blur .8s forwards;

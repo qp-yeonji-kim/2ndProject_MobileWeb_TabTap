@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import "_mixin", "_var";
 
 @font-face {
@@ -214,12 +213,6 @@ body {
   font-family: coreE;
   font-size: $f20;
   font-weight: 400;
-  color: $brown;
-
-  h2 {
-    margin: 0 auto $f10;
-    font-weight: 500;
-  }
 }
 
 #wrap {
@@ -238,7 +231,7 @@ body {
   border-bottom: 1px solid #fff;
   z-index: 1000;
 
-  &.white{
+  &.white {
     background: #fff;
     border-color: $grey;
   }
@@ -374,21 +367,23 @@ body {
           margin-left: $f12;
         }
 
-        div{
+        div {
           @include bgsize(contain);
           width: $f42;
           height: $f42;
           margin: $f8 auto 0;
           background: no-repeat center;
         }
-  
-        &:nth-of-type(1) div{
+
+        &:nth-of-type(1) div {
           background-image: url("../images/common/i-mypage.svg");
         }
-        &:nth-of-type(2) div{
+
+        &:nth-of-type(2) div {
           background-image: url("../images/common/i-cart.svg");
         }
-        &:nth-of-type(3) div{
+
+        &:nth-of-type(3) div {
           background-image: url("../images/common/i-order.svg");
         }
       }
@@ -410,7 +405,7 @@ body {
       clear: both;
       padding: $f24 0;
       color: #fff;
-      background: linear-gradient(135deg, #826b90, #916a5b);
+      background: #7d6790;
 
       a {
         display: inline-block;
@@ -495,16 +490,6 @@ body {
   }
 }
 
-#footer {
-  @include b-box;
-  @include bg-g(150deg, $l-orange, $l-violet);
-  @include b-radius($f20 $f20 0 0);
-  width: 100%;
-  height: $f300;
-  padding: $f26 $f52;
-  font-family: coreD;
-  font-size: $f12;
-}
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
 screen and (min-resolution: 2dppx),

@@ -4,10 +4,22 @@
 
 article {
   margin: $f90 $f20 $f85;
+  
+  h2{
+    font-family: roboto;
+    font-size: 22px;
+  }
+
+  p {
+    margin: 6px 0 30px 0;
+    font-size: 12px;
+  }
 }
+
 
 #cnt_main {
   margin: 0;
+  color: $brown;
 
   .swiper-container {
     width: 100vw;
@@ -178,94 +190,20 @@ article {
       }
     }
   }
-
-  #toolbar {
-    position: fixed;
-    bottom: 3%;
-    right: 6%;
-    z-index: 900;
-
-    li {
-      @include b-radius(50%);
-      position: relative;
-      display: block;
-      width: $f60;
-      height: $f60;
-      max-width: 100px;
-      max-height: 100px;
-      text-align: center;
-      border: $f2 solid;
-
-      &:nth-child(1) {
-        background: $orange;
-        border-color: #fff;
-      }
-
-      &:nth-child(2) {
-        background: #fff;
-        border-color: $orange;
-      }
-
-      &::after {
-        @include bgsize(contain);
-        @include t-form(translate(-50%, -50%));
-        content: "";
-        opacity: 0.5;
-        position: absolute;
-        width: 80%;
-        height: 80%;
-        top: 50%;
-        left: 50%;
-        z-index: 10;
-      }
-
-      &:nth-of-type(1)::after {
-        background: url("../images/main/i-how.png")no-repeat center;
-      }
-
-      &:nth-of-type(2)::after {
-        background: url("../images/main/i-reserve.png")no-repeat center;
-      }
-
-      a {
-        @include b-box;
-        @include t-form(translateY(-50%));
-        display: block;
-        position: relative;
-        top: 50%;
-        font-family: coreD;
-        font-size: $f14;
-        line-height: $f18;
-        text-align: center;
-        font-weight: 500;
-        color: $brown;
-        z-index: 20;
-      }
-    }
-  }
 }
 
 #cnt_company {
   padding: $f90 0 $f85;
   margin: 0;
 
-  h2{
-    margin-left: 10px;
-    font-family: roboto;
-    font-size: 22px;
-    letter-spacing: 1.5;
-  }
-
-  p {
-    margin-left: 10px;
-    font-size: 12px;
+  h2, p{
+    margin-left: 20px;
   }
 
   ul {
     display: block;
     clear: both;
     width: 100%;
-    margin: $f30 auto 0;
 
     li {
       @include bgsize(cover);
@@ -275,8 +213,11 @@ article {
       background: no-repeat center;
 
       a {
+        @include t-form(translateY(-50%));
         display: inline-block;
-        margin: 36px $f30;
+        position: relative;
+        top: 50%;
+        margin: 0 30px;
         font-family: roboto;
         font-size: 26px;
         font-weight: 700;
@@ -593,16 +534,8 @@ article {
 }
 
 #cnt_social {
-  >p {
-    font-weight: 300;
-    font-size: $f16;
-    margin-bottom: $f18;
-  }
 
   ul {
-    margin: 0 auto;
-    width: 88.88888888888889vw;
-
     &::after {
       content: "";
       clear: both;
@@ -627,6 +560,23 @@ article {
         margin-top: $f4;
       }
 
+      &::after {
+        @include b-radius($f20);
+        @include bg-g(180deg, rgba(125, 103, 144, .8), rgba(170, 170, 170, 0.8));
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $f100;
+        height: $f100;
+      }
+      &:nth-of-type(1)::after,
+      &:nth-of-type(6)::after {
+          @include b-radius($f5);
+      }
+
+
       a {
         display: block;
         width: 100%;
@@ -642,6 +592,7 @@ article {
         width: $f90;
         height: $f90;
         border: $f1 solid #fff;
+        z-index: 100;
       }
 
       &:nth-of-type(1),
@@ -656,68 +607,108 @@ article {
       }
 
       a::after {
-        @include bgsize(cover);
+        @include bgsize(contain);
         @include t-form(translate(-50%, -50%));
         content: "";
+        display: block;
         position: absolute;
         top: 50%;
         left: 50%;
-        display: block;
         width: $f30;
         height: $f30;
         z-index: 10;
+        background: no-repeat center;
       }
 
       &:nth-child(1) a::after {
-        background-image: url("../images/common/i-naver.png");
+        background-image: url("../images/main/naver.svg");
       }
 
       &:nth-child(2) a::after {
-        background-image: url("../images/common/i-instagram.png");
+        background-image: url("../images/main/instagram.svg");
       }
 
       &:nth-child(3) a::after {
-        background-image: url("../images/common/i-facebook.png");
+        background-image: url("../images/main/facebook.svg");
       }
 
       &:nth-child(4) a::after {
-        background-image: url("../images/common/i-youtube.png");
+        background-image: url("../images/main/youtube.svg");
       }
 
       &:nth-child(5) a::after {
-        background-image: url("../images/common/i-kakaotalk.png");
+        background-image: url("../images/main/kakaotalk.svg");
       }
 
       &:nth-child(6) a::after {
         content: "공지사항";
         display: block;
-        font-size: $f16;
-        color: #fff;
         width: $f31;
         height: auto;
+        font-size: $f16;
+        color: #fff;
       }
 
       img {
         @include b-radius($f20);
         width: 100%;
         height: 100%;
-
-        &::after {
-          @include bg-g(180deg, rgba(255, 210, 194, 0.8), rgba(190, 171, 202, 0.8));
-          content: "";
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: $f100;
-          height: $f100;
-          z-index: 10;
-        }
       }
     }
   }
 }
 
+#footer {
+  @include b-box;
+  @include bg-g(180deg, $l-grey, $l-violet);
+  @include b-radius(10px 10px 0 0);
+  width: 100%;
+  height: 150px;
+  padding: 24px 20px;
+  line-height: 1.8;
+  font-family: coreD;
+  font-size: 12px;
+  font-weight: 300;
+
+  ul{
+    width: 100%;
+    li{
+      position: relative;
+      float: left;
+      font-size: 12px;
+      font-weight: 400;
+      text-align: center;
+      color: $violet;
+
+      + li{
+        margin-left: 8px;
+
+        &::after{
+          @include t-form(translateY(-50%));
+          content: "";
+          position: absolute;
+          left: -4px;
+          top: 50%;
+          width: 1px;
+          height: 8px;
+          background: $violet;
+        }
+      }
+    }
+  }
+
+  address{
+    clear: both;
+    display: block;
+    line-height: 1.2;
+
+    span{
+      display: block;
+      line-height: 2.6;
+      font-size: 10px;
+    }
+  }
+}
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
 screen and (min-resolution: 2dppx),
