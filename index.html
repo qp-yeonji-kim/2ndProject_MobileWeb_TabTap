@@ -44,9 +44,15 @@
 				<p><strong>로그인</strong>이 필요합니다. <a href="" class="login-btn" data-link="first"><img
 							src="images/common/i-login.svg" alt="로그인 하기"></a></p>
 				<ul class="private">
-					<li><a href=""><div></div><span>나의 페이지</span></a></li>
-					<li><a href=""><div></div><span>장바구니</span></a></li>
-					<li><a href=""><div></div><span>주문내역</span></a></li>
+					<li><a href="">
+							<div></div><span>나의 페이지</span>
+						</a></li>
+					<li><a href="">
+							<div></div><span>장바구니</span>
+						</a></li>
+					<li><a href="">
+							<div></div><span>주문내역</span>
+						</a></li>
 				</ul>
 				<ul id="gnb">
 					<li>
@@ -162,20 +168,29 @@
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide review1">
-						<div class="point_review">
-							<strong>Intuos pro 중형</strong>
-							<p>집에서 편안하게 설정해 둔 그대로<br>
-								그대로 타블렛을 체험할 수 있어서 좋았어요.</p>
-							<span>장**</span>
+						<div class="rate" aria-label="평점 5점 만점에 5점">
+							<img src="images/main/star.svg" alt="...">
+							<img src="images/main/star.svg" alt="...">
+							<img src="images/main/star.svg" alt="...">
+							<img src="images/main/star.svg" alt="...">
+							<img src="images/main/star.svg" alt="...">
 						</div>
-						<a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
+						<p class="short-review">“집에 설치해 둔 프로그램과 호환이<br>
+							매우 잘되고 부드럽게 써져서 좋았습니다.”</p>
+						<div class="img-tablet"></div>
+						<strong class="name-tablet">Wacom Cintiqu pro 24인치</strong>
+						<p class="short-info">
+							프리미엄 4K 화면과 펜의 시차가 거의 없어<br>
+							모든 창의적 발전을 향상시켜주는 타블렛
+						</p>
+						<div class="price">3일 대여<strong>50,000</strong>원</div>
+						<a href="" class="review-more">제품 상세 보기<img src="images/main/next-short.svg" alt="..." class="next-arrow"></a>
 					</div>
 					<div class="swiper-slide review2">
 						<div class="point_review">
 							<strong>Artist 22E Pro</strong>
 							<p>대여기간 내내 큰 발열을 느끼지 못했습니다.<br>
 								단축키 설정이 매우 편하게 느껴진 제품입니다.</p>
-							<span>최**</span>
 						</div>
 						<a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
 					</div>
@@ -184,7 +199,6 @@
 							<strong>Wacom One</strong>
 							<p>제품이 가벼워서 매우 좋았습니다.<br>
 								보급형 액정 타블렛으로는 딱이에요!</p>
-							<span>조**</span>
 						</div>
 						<a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
 					</div>
@@ -206,6 +220,11 @@
 						</div>
 						<a href="" class="thumbnail">+<span class="blind-b">후기 뒷내용 더 읽기</span></a>
 					</div>
+				</div>
+				<div id="review_controller">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
 				</div>
 			</div>
 		</article>

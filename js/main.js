@@ -29,7 +29,7 @@ $(document).ready(function(){
     mainSwiper.autoplay.start();
   });
   
-  var eventSwiper = new Swiper('#cnt_now_event .swiper-container', {
+  var reviewSwiper = new Swiper('#cnt_best-review .swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -39,13 +39,13 @@ $(document).ready(function(){
     },
   });
 
-  var reviewSwiper = new Swiper('#cnt_best-review .swiper-container', {
-    centeredSlides: true,
-    slidesPerView: 2,
-    loop: true,
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      hide: false,
+  var eventSwiper = new Swiper('#cnt_now_event .swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
     },
   });
 

@@ -2,10 +2,12 @@
 article {
   margin: 25vw 5.5555555556vw 23.6111111111vw; }
   article h2 {
+    line-height: 1;
     font-family: roboto;
     font-size: 22px; }
-  article p {
-    margin: 6px 0 30px 0;
+  article h2 + p {
+    margin: 10px 0 32px 0;
+    line-height: 1;
     font-size: 12px; }
 
 #cnt_main {
@@ -123,7 +125,8 @@ article {
 #cnt_company {
   padding: 25vw 0 23.6111111111vw;
   margin: 0; }
-  #cnt_company h2, #cnt_company p {
+  #cnt_company h2,
+  #cnt_company p {
     margin-left: 20px; }
   #cnt_company ul {
     display: block;
@@ -189,24 +192,22 @@ article {
 
 #cnt_best-review {
   position: relative;
-  top: 50%;
-  margin: 0;
   width: 100%;
-  height: 111.1111111111vw; }
-  #cnt_best-review h2 {
-    text-align: center; }
+  margin: 0;
+  font-family: coreD;
+  text-align: center; }
   #cnt_best-review > p {
-    text-align: center; }
+    font-family: coreE; }
     #cnt_best-review > p::before {
-      background: #C4C4C4;
-      background: -webkit-linear-gradient(0, #C4C4C4, transparent);
-      background: -o-linear-gradient(0, #C4C4C4, transparent);
-      background: linear-gradient(0, #C4C4C4, transparent);
+      background: #E5E5E5;
+      background: -webkit-linear-gradient(0, #E5E5E5, transparent);
+      background: -o-linear-gradient(0, #E5E5E5, transparent);
+      background: linear-gradient(0, #E5E5E5, transparent);
       content: "";
       display: block;
       position: absolute;
       left: 0;
-      bottom: 20%;
+      bottom: 50%;
       width: 100%;
       height: 165px; }
     #cnt_best-review > p::after {
@@ -225,79 +226,73 @@ article {
     -moz-transition: transform 0.5s;
     -o-transition: transform 0.5s;
     transition: transform 0.5s; }
-  #cnt_best-review .swiper-slide-prev,
-  #cnt_best-review .swiper-slide-next {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    opacity: 0.7; }
-  #cnt_best-review .point_review {
-    height: 27.7777777778vw;
-    font-family: coreD;
-    text-align: center;
-    padding-top: 41.6666666667vw; }
-    #cnt_best-review .point_review strong {
-      display: block;
-      font-weight: 600;
-      font-size: 5vw; }
-    #cnt_best-review .point_review p {
-      font-size: 4.4444444444vw;
-      margin-right: -13vw;
-      margin-left: -13vw; }
-    #cnt_best-review .point_review span {
-      font-size: 3.8888888889vw; }
-  #cnt_best-review .swiper-slide-prev .point_review *,
-  #cnt_best-review .swiper-slide-next .point_review * {
-    display: none; }
-  #cnt_best-review .thumbnail {
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background: rgba(255, 210, 194, 0.5);
-    background: -webkit-linear-gradient(180deg, rgba(255, 210, 194, 0.5), rgba(190, 171, 202, 0.5));
-    background: -o-linear-gradient(180deg, rgba(255, 210, 194, 0.5), rgba(190, 171, 202, 0.5));
-    background: linear-gradient(180deg, rgba(255, 210, 194, 0.5), rgba(190, 171, 202, 0.5));
-    position: relative;
-    left: 50%;
-    top: -65.2777777778vw;
-    display: block;
-    width: 33.8888888889vw;
-    height: 33.8888888889vw;
-    line-height: 33.8888888889vw;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.8);
-    font-family: coreD;
-    font-size: 13.8888888889vw;
-    text-align: center;
-    z-index: 100; }
-    #cnt_best-review .thumbnail::before {
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      -webkit-background-size: cover !important;
-      background-size: cover !important;
-      position: absolute;
-      display: block;
-      content: "";
-      width: 33.8888888889vw;
-      height: 33.8888888889vw;
-      top: 0;
-      left: 0;
-      z-index: -100; }
-  #cnt_best-review .review1 .thumbnail::before {
-    background-image: url("../images/review/r1_wa_IntuosPro.jpg"); }
-  #cnt_best-review .review2 .thumbnail::before {
+  #cnt_best-review .rate {
+    height: 3.8888888889vw;
+    margin-top: 30px; }
+    #cnt_best-review .rate img {
+      width: 3.8888888889vw;
+      vertical-align: top; }
+      #cnt_best-review .rate img + img {
+        margin-left: 0.5555555556vw; }
+  #cnt_best-review .short-review {
+    margin-top: 10px;
+    font-size: 10px; }
+  #cnt_best-review .img-tablet {
+    -webkit-background-size: contain !important;
+    background-size: contain !important;
+    width: 220px;
+    height: 180px;
+    margin: 0 auto;
+    background: no-repeat center; }
+  #cnt_best-review .review1 .img-tablet {
+    background-image: url("../images/review/cintiq1.png"); }
+  #cnt_best-review .review2 .img-tablet {
     background-image: url("../images/review/r2_jang_Artist22Pro.jpg"); }
-  #cnt_best-review .review3 .thumbnail::before {
+  #cnt_best-review .review3 .img-tablet {
     background-image: url("../images/review/r3_wa_wacomOne.jpg"); }
-  #cnt_best-review .review4 .thumbnail::before {
+  #cnt_best-review .review4 .img-tablet {
     background-image: url("../images/review/r4_hu_KAMVAS13.jpg"); }
-  #cnt_best-review .review5 .thumbnail::before {
-    background-image: url("../images/review/r5_xp_Deco01V2.jpg"); }
-  #cnt_best-review .swiper-container-horizontal > .swiper-scrollbar {
-    bottom: 2.7777777778vw;
-    height: 1.6666666667vw; }
-  #cnt_best-review .swiper-scrollbar-drag {
-    background: #735587; }
+  #cnt_best-review .name-tablet {
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: 700; }
+  #cnt_best-review .short-info {
+    margin: 10px 0 24px;
+    line-height: 1.5;
+    font-size: 14px; }
+  #cnt_best-review .price {
+    font-size: 12px;
+    color: #6D6D6D; }
+    #cnt_best-review .price strong {
+      display: inline-block;
+      padding: 0 4px 0 8px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #000; }
+  #cnt_best-review .review-more {
+    display: inline-block;
+    height: 12px;
+    padding: 0 0 4px 4px;
+    margin: 30px 0;
+    line-height: 1;
+    border-bottom: 1px solid #6D6D6D;
+    font-size: 12px; }
+  #cnt_best-review .next-arrow {
+    padding: 0 4px; }
+  #cnt_best-review .swiper-button-prev,
+  #cnt_best-review .swiper-button-next {
+    -webkit-background-size: contain !important;
+    background-size: contain !important;
+    width: 34px;
+    height: 34px;
+    background: no-repeat center; }
+    #cnt_best-review .swiper-button-prev::after,
+    #cnt_best-review .swiper-button-next::after {
+      display: none; }
+  #cnt_best-review .swiper-button-prev {
+    background-image: url("../images/main/prev-long.svg"); }
+  #cnt_best-review .swiper-button-next {
+    background-image: url("../images/main/next-long.svg"); }
 
 #cnt_now_event {
   margin-left: 0;
