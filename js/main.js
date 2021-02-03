@@ -34,9 +34,6 @@ $(document).ready(function(){
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    pagination: {
-      el: '.swiper-pagination',
-    },
   });
 
   var eventSwiper = new Swiper('#cnt_now_event .swiper-container', {

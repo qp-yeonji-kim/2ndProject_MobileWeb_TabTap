@@ -275,8 +275,8 @@ article {
     padding: 0 0 4px 4px;
     margin: 30px 0;
     line-height: 1;
-    border-bottom: 1px solid #6D6D6D;
-    font-size: 12px; }
+    font-size: 12px;
+    border-bottom: 1px solid #6D6D6D; }
   #cnt_best-review .next-arrow {
     padding: 0 4px; }
   #cnt_best-review .swiper-button-prev,
@@ -358,11 +358,11 @@ article {
       #cnt_now_event .swiper-container .swiper-pagination .swiper-pagination-bullet {
         -webkit-border-radius: 50%;
         border-radius: 50%;
+        opacity: 1;
         width: 2.7777777778vw;
         height: 2.7777777778vw;
         margin: 1.1111111111vw;
-        background: #BEABCA;
-        opacity: 1; }
+        background: #BEABCA; }
       #cnt_now_event .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
         -webkit-border-radius: 5.5555555556vw;
         border-radius: 5.5555555556vw;
@@ -380,9 +380,9 @@ article {
     #cnt_now_event .swiper-container .swiper-button-next {
       -webkit-background-size: contain !important;
       background-size: contain !important;
+      top: 50%;
       width: 34px;
       height: 34px;
-      top: 50%;
       background: no-repeat center; }
     #cnt_now_event .swiper-container .swiper-button-prev {
       background-image: url("../images/main/tall-prev.svg"); }
@@ -391,8 +391,8 @@ article {
 
 #cnt_social ul::after {
   content: "";
-  clear: both;
-  display: block; }
+  display: block;
+  clear: both; }
 #cnt_social ul li {
   position: relative;
   float: left;
@@ -454,8 +454,8 @@ article {
     left: 50%;
     width: 8.3333333333vw;
     height: 8.3333333333vw;
-    z-index: 10;
-    background: no-repeat center; }
+    background: no-repeat center;
+    z-index: 10; }
   #cnt_social ul li:nth-child(1) a::after {
     background-image: url("../images/main/naver.svg"); }
   #cnt_social ul li:nth-child(2) a::after {
@@ -517,8 +517,8 @@ article {
           height: 8px;
           background: #735587; }
   #footer address {
-    clear: both;
     display: block;
+    clear: both;
     line-height: 1.2; }
     #footer address span {
       display: block;

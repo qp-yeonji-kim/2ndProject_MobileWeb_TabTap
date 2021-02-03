@@ -166,8 +166,8 @@ body {
   #header .logo {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    position: relative;
     float: left;
+    position: relative;
     top: 50%; }
     #header .logo img {
       width: 38px; }
@@ -231,11 +231,11 @@ body {
     #nav .nav_inner > p,
     #nav .nav_inner > span {
       display: inline-block;
-      font-size: 4.4444444444vw;
-      font-weight: 300;
       padding-top: 2px;
       padding-left: 5.5555555556vw;
-      line-height: 11.6666666667vw; }
+      line-height: 11.6666666667vw;
+      font-size: 4.4444444444vw;
+      font-weight: 300; }
       #nav .nav_inner > p strong,
       #nav .nav_inner > span strong {
         font-weight: 500; }
@@ -321,11 +321,11 @@ body {
       #nav .nav_inner #gnb li.on ul {
         display: block; }
       #nav .nav_inner #gnb li ul li a {
-        padding: 2.7777777778vw 16.1111111111vw;
         width: 100%;
+        padding: 2.7777777778vw 16.1111111111vw;
         font-family: coreE;
-        font-weight: 300;
-        font-size: 4.4444444444vw; }
+        font-size: 4.4444444444vw;
+        font-weight: 300; }
       #nav .nav_inner #gnb > li > a:focus,
       #nav .nav_inner #gnb > li > a:hover,
       #nav .nav_inner #gnb > li.on > a {
@@ -340,8 +340,8 @@ body {
       display: block;
       width: 22.2222222222vw;
       margin: 8.3333333333vw 0 2.7777777778vw 13.8888888889vw;
-      font-weight: 400;
-      font-size: 4.4444444444vw; }
+      font-size: 4.4444444444vw;
+      font-weight: 400; }
     #nav .nav_inner .admin strong + p,
     #nav .nav_inner .admin > strong + span {
       display: inline-block;

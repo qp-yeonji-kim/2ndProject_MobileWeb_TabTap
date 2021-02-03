@@ -406,8 +406,8 @@ article {
     padding: 0 0 4px 4px;
     margin: 30px 0;
     line-height: 1;
-    border-bottom: 1px solid $b-grey;
     font-size: 12px;
+    border-bottom: 1px solid $b-grey;
   }
 
   .next-arrow {
@@ -427,11 +427,11 @@ article {
   }
 
   .swiper-button-prev {
-    background-image: url("../images/main/prev-long.svg")
+    background-image: url("../images/main/prev-long.svg");
   }
 
   .swiper-button-next {
-    background-image: url("../images/main/next-long.svg")
+    background-image: url("../images/main/next-long.svg");
   }
 }
 
@@ -518,11 +518,11 @@ article {
 
       .swiper-pagination-bullet {
         @include b-radius(50%);
+        opacity: 1;
         width: $f10;
         height: $f10;
         margin: $f4;
         background: $l-violet;
-        opacity: 1;
       }
 
       .swiper-pagination-bullet-active {
@@ -542,9 +542,9 @@ article {
     .swiper-button-prev,
     .swiper-button-next {
       @include bgsize(contain);
+      top: 50%;
       width: 34px;
       height: 34px;
-      top: 50%;
       background: no-repeat center;
     }
 
@@ -563,8 +563,8 @@ article {
   ul {
     &::after {
       content: "";
-      clear: both;
       display: block;
+      clear: both;
     }
 
     li {
@@ -642,8 +642,8 @@ article {
         left: 50%;
         width: $f30;
         height: $f30;
-        z-index: 10;
         background: no-repeat center;
+        z-index: 10;
       }
 
       &:nth-child(1) a::after {
@@ -725,8 +725,8 @@ article {
   }
 
   address {
-    clear: both;
     display: block;
+    clear: both;
     line-height: 1.2;
 
     span {

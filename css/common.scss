@@ -238,8 +238,8 @@ body {
 
   .logo {
     @include t-form(translateY(-50%));
-    position: relative;
     float: left;
+    position: relative;
     top: 50%;
 
     img {
@@ -328,11 +328,11 @@ body {
     >p,
     >span {
       display: inline-block;
-      font-size: $f16;
-      font-weight: 300;
       padding-top: 2px;
       padding-left: $f20;
       line-height: $f42;
+      font-size: $f16;
+      font-weight: 300;
 
       strong {
         font-weight: 500;
@@ -448,11 +448,11 @@ body {
       }
 
       li ul li a {
-        padding: $f10 $f58;
         width: 100%;
+        padding: $f10 $f58;
         font-family: coreE;
-        font-weight: 300;
         font-size: $f16;
+        font-weight: 300;
       }
 
       >li>a:focus,
@@ -472,8 +472,8 @@ body {
         display: block;
         width: $f80;
         margin: $f30 0 $f10 $f50;
-        font-weight: 400;
         font-size: $f16;
+        font-weight: 400;
       }
 
       strong+p,
