@@ -204,13 +204,14 @@ body {
 .menu_btn {
   float: right;
   position: relative;
-  top: 12px;
   width: 34px;
   height: 34px; }
   .menu_btn.menu_btn_open {
+    top: 12px;
     left: 18px; }
   .menu_btn.menu_btn_close {
     position: absolute;
+    top: 8px;
     right: 20px; }
   .menu_btn img {
     width: 34px; }
@@ -233,8 +234,8 @@ body {
       display: inline-block;
       padding-top: 2px;
       padding-left: 5.5555555556vw;
-      line-height: 11.6666666667vw;
-      font-size: 4.4444444444vw;
+      line-height: 36px;
+      font-size: 16px;
       font-weight: 300; }
       #nav .nav_inner > p strong,
       #nav .nav_inner > span strong {
@@ -244,10 +245,13 @@ body {
         width: 36px;
         margin-top: -3px;
         margin-left: 10px; }
+    #nav .nav_inner > p {
+      position: absolute;
+      top: 6px; }
     #nav .nav_inner .private {
       width: 100%;
       height: 22.7777777778vw;
-      margin: 20px; }
+      margin: 70px 20px 20px 20px; }
       #nav .nav_inner .private li {
         -webkit-border-radius: 10px;
         border-radius: 10px;

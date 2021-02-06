@@ -407,10 +407,10 @@ article {
   #cnt_social ul li::after {
     -webkit-border-radius: 5.5555555556vw;
     border-radius: 5.5555555556vw;
-    background: rgba(125, 103, 144, 0.8);
-    background: -webkit-linear-gradient(180deg, rgba(125, 103, 144, 0.8), rgba(170, 170, 170, 0.8));
-    background: -o-linear-gradient(180deg, rgba(125, 103, 144, 0.8), rgba(170, 170, 170, 0.8));
-    background: linear-gradient(180deg, rgba(125, 103, 144, 0.8), rgba(170, 170, 170, 0.8));
+    background: rgba(137, 114, 157, 0.8);
+    background: -webkit-linear-gradient(180deg, rgba(137, 114, 157, 0.8), rgba(63, 63, 63, 0.8));
+    background: -o-linear-gradient(180deg, rgba(137, 114, 157, 0.8), rgba(63, 63, 63, 0.8));
+    background: linear-gradient(180deg, rgba(137, 114, 157, 0.8), rgba(63, 63, 63, 0.8));
     content: "";
     display: block;
     position: absolute;

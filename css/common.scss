@@ -292,16 +292,17 @@ body {
 .menu_btn {
   float: right;
   position: relative;
-  top: 12px;
   width: 34px;
   height: 34px;
 
   &.menu_btn_open {
+    top: 12px;
     left: 18px;
   }
 
   &.menu_btn_close {
     position: absolute;
+    top: 8px;
     right: 20px;
   }
 
@@ -330,8 +331,8 @@ body {
       display: inline-block;
       padding-top: 2px;
       padding-left: $f20;
-      line-height: $f42;
-      font-size: $f16;
+      line-height: 36px;
+      font-size: 16px;
       font-weight: 300;
 
       strong {
@@ -345,10 +346,15 @@ body {
       }
     }
 
+    >p{
+      position: absolute;
+      top: 6px;
+    }
+
     .private {
       width: 100%;
       height: $f82;
-      margin: 20px;
+      margin: 70px 20px 20px 20px;
 
       li {
         @include b-radius(10px);
